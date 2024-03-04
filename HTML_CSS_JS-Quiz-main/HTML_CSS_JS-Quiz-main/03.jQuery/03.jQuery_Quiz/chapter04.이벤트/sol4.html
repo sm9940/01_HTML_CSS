@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div id="wrap">
+         <button class="btn_1">추첨</button>
+         <p></p>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+      <script>
+         /*
+        일반적인 이벤트 등록 방식은 동적으로 생성되거나 복제된 요소에 적용되지 않으므로
+        라이브 이벤트 등록 방식으로 작성해야 한다
+        */
+
+         $(document).on('click', '.btn_1.on', function () {
+            $('p').text('당첨되셨습니다')
+         })
+
+         $('.btn_1').addClass('on')
+      </script>
+   </body>
+</html>

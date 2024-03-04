@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+			width: 500px;
+			margin: 20px auto;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			float: left;
+			margin: 50px;
+		}
+        /* 2. 애니메이션 사용: 원하는 요소(elements)에 적용 */
+		#box1 {
+			background-color: #4cff00;
+			border: 1px solid transparent;
+            animation-name: shape;
+            animation-duration: 3s;
+            /* animation-iteration-count: 애니메이션 반복횟수 지정(디폴트는 1) */
+            animation-iteration-count: infinite;
+            /* animation-direction: 애니메이션 진행방향을 바꾼다(디폴트 normal) */
+            animation-direction: alternate;
+            /* animation-timing-function: 진행 속도 */
+            animation-timing-function: linear;
+            /* animation-delay: 몇초뒤에 애니메이션을 진행할지 */
+            animation-delay: 2s;
+		}
+		#box2 {
+			background-color: #8f06b0;
+			border: 1px solid transparent;
+            /* animation-name: rotate;
+            animation-duration: 3s;
+            animation-iteration-count: 3; */
+            /* animation: <animation-name>
+               <animation-timing-function>
+               <animation-delay> 
+               <animation-iteration-count> 
+               <animation-direction> */
+            /* <animation-duration>은 반드시 작성 */
+            animation: rotate 2s ease-in 1s infinite alternate,
+            shape 3s linear infinite alternate;
+		}
+
+        /* 1.애니메이션 정의: @keyframes 이용 */
+        @keyframes shape {
+            /* from(시작) ~ to(끝): 시간의 흐름 정의 */
+            /* transparent: 투명하게 */
+            from {
+                border: 1px solid transparent;
+            }
+            20% {
+                border: 5px solid blue;
+            }
+            50% {
+                border: 10px solid red;
+            }
+            75% {
+                border: 5px solid blue;
+            }
+            to {
+                border: 1px solid black;
+                /* 둥글게 */
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(45deg);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+		<div class="box" id="box1"></div>
+		<div class="box" id="box2"></div>
+	</div>
+</body>
+</html>

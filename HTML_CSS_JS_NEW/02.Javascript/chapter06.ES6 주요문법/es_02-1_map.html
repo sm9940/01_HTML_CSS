@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //map: 배열내의 모든 요소를 모아서 새로운 배열을 반환
+
+        //es5
+
+        const array1 = [1,4,9,16]
+
+        let arr1 = array1.map(function(element,index,array){
+            console.log(`element: ${element}, index : ${index}, array : ${array}`)
+            return element * 2
+        })
+
+        console.log(`최종 도출되는 결과 : ${arr1}`)
+
+        //es6
+
+        let arr2 = array1.map((element,index,array)=>{
+            console.log(`element: ${element}, index : ${index}, array : ${array}`)
+            return element *2
+        })
+
+        console.log(`최종 도출되는 결과 : ${arr2}`)
+    </script>
+</body>
+</html>

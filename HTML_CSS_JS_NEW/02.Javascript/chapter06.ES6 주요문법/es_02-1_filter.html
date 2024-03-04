@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //filter : 주어진 함수를 통과하는 모든 요소들을 필터링 해서 새로운 배열로 반환
+        //배열.filter(function(){}) -> es5
+        //배열.filter(()=>{}) -> es6
+        const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+        //es5버전
+
+        /*
+        map, filter, foreach 공통사항
+        ★1. function(매개변수1, 매개변수2, 매개변수3) {} 안의 매개변수명은 바꿀 수 있다
+          2. es6버전에서는 return문이 하나일시 중괄호, return생략 가능 (화살표 함수의 특징)
+          3. function(매개변수1, 매개변수2, 매개변수3) {} 안의 매개변수는 생략 가능하다
+        
+        */var val = words.filter(function(element,index,array){
+            console.log(`element: ${element}, index : ${index}, array : ${array}`)
+            //문자열.length -> 문자의 갯수 출력
+            return element.length >6 //6자 이상의 문자열만 거름
+        })
+
+        console.log(`최종 도출 값: ${val}`)
+
+        //es6버전
+
+        var val2 = words.filter((element,index,array)=> {
+            //문자열.length -> 문자의 갯수 출력
+            return element.length >6 //6자 이상의 문자열만 거름
+        })
+
+        console.log(`최종 도출 값: ${val2}`)
+    </script>
+</body>
+</html>

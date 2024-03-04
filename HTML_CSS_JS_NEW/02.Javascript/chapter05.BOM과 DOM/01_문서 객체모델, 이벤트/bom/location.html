@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <button onclick="loc()">history.html로 이동!</button>
+      <script>
+         function loc() {
+            //페이지 이동
+            location.href = './history.html'
+         }
+         var sWidth = screen.width //브라우저 너비
+         var sHeight = screen.height //브라우저 높이
+         var sColor = screen.colorDepth //해상도
+
+         console.log(`너비 : ${sWidth}, 높이: ${sHeight}, 해상도: ${sColor}`)
+
+         var local = location.href
+         console.log(local)
+
+         var naviInfo = navigator.userAgent
+         console.log(naviInfo)
+      </script>
+   </body>
+</html>

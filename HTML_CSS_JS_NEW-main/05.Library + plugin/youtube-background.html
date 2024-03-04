@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* optional css fade in animation */
+      iframe {
+        transition: opacity 500ms ease-in-out;
+        transition-delay: 250ms;
+      }
+
+      div {
+        width: 800px !important;
+        height: 500px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- target element -->
+    <div data-vbg="https://www.youtube.com/watch?v=eEpEeyqGlxA"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/youtube-background/jquery.youtube-background.min.js"
+    ></script>
+    <script type="text/javascript">
+      $("[data-vbg]").youtube_background();
+    </script>
+  </body>
+</html>

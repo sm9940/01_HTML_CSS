@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 10
+        var b = 20
+        var c = 10
+        var f = "20"
+        var result
+
+        //★자바스크립트 변수는 값을 재할당 할 수 있다.
+        result = b == f
+        console.log(result)
+
+        result = a != b
+        console.log(result)
+        
+        // ★값, 자료형 둘다 비교를 한다
+        result = b === f 
+        console.log(result)
+
+        c= 100
+        console.log(c)
+
+        // 빈문자열
+        var str = ''
+        var str2 = 'hello'
+        var num = 0
+        var num2 = 1
+        var num3 = 2
+        var sum;    //undefined
+        var sum2 = null //빈값
+
+        console.log(sum)
+        console.log(sum2)
+
+        console.log(Boolean(str))
+        console.log(Boolean(num))
+        console.log(Boolean(sum))
+        console.log(Boolean(sum2))
+        console.log(`====================`)
+
+        console.log(Boolean(str2))
+        console.log(Boolean(num2))
+        console.log(Boolean(num3))
+
+        console.log(`====================`)
+
+        // 논리곱, 논리합, 부정
+        // ★&&(and): 전부 true 여야 true
+        //  ||(or): 하나만 true 여도 true
+        
+        var bool_1 = true
+        var bool_2 = false
+        var bool_3 = false
+
+        console.log(true && true)
+        console.log(true || false)
+        console.log(bool_1 && bool_2 && bool_3)
+        console.log(bool_1 || (bool_2 && bool_3)) 
+        console.log((bool_1 || bool_2) && bool_3) 
+        console.log(!bool_1)
+
+        console.log( `===============`)
+        
+        var test = 6>2
+
+        console.log(test)
+        console.log(1>10 || 9==9) 
+        console.log(1<=20 && 9>1 || test)
+        console.log(Boolean(null) && false)
+        console.log(Boolean('') && false)
+
+        console.log( `===============`)
+
+        var name
+
+        console.log(typeof `안녕`)
+        console.log(typeof 273 === 'number')
+        console.log(typeof true)
+        console.log(typeof test)
+        console.log(typeof name)
+    </script>
+</body>
+</html>

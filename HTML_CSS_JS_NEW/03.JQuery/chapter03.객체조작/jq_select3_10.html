@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <ul id="listZone">
+         <li>리스트</li>
+      </ul>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         // append => 자식태그중 막내로 생성
+         $('#listZone').append('<li>appendTo</li>')
+         //prepend => 자식태그중 첫째로 생성
+         $('#listZone').prepend('<li>prependTo</li>')
+      </script>
+   </body>
+</html>

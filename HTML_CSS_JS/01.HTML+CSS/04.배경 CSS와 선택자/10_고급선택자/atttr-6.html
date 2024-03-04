@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      ul {
+            list-style: square;
+         }
+         li a {
+            line-height: 30px;
+            font-size: 14px;
+            color: blue;
+            text-decoration: none;
+         }
+
+         /* 6. 속성 선택자
+            [속성 $= 값]
+            지정한 속성값으로 끝나는 태그를 선택한다
+             */
+       a[href $='hwp'] {
+        /* href 속성값이 hwp 확장자로 끝나는 끝나는 태그 선택 */
+        background: url(./images/hwp_icon.gif) no-repeat center right;
+        padding-right: 25px; 
+       }      
+       a[href $='xls'] {
+        background: url(./images/excel_icon.gif) no-repeat center right;
+        padding-right: 25px;
+       }
+    </style>
+</head>
+<body>
+    <h3>회사 소개 파일 내려받기</h3>
+	<ul>
+		<li><a href="intro.hwp">hwp 파일</a></li>
+		<li><a href="intro.xls">엑셀 파일</a></li>
+	</ul>
+</body>
+</html>

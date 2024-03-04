@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/* 초기화 태그 */
+
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 0.9em !important;
+}
+
+ul {
+   list-style: none;
+   margin: 0 !important;
+   padding: 0 !important;
+}
+
+a {
+   color: black !important;
+   text-decoration: none !important;
+}
+
+p {
+   margin: 0 !important;
+}
+
+.wrap {
+   min-width: 1200px;
+   overflow: hidden !important;
+}
+
+/* 헤더 */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    margin: 0 auto;
+}
+
+.nav__top-button {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    
+
+}
+
+.nav__top-button > .top-button__menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 50px;
+    padding: 10px 0px 0px;
+}
+.nav__top-button > .top-button__menu > .menu_1 {
+    display: flex;
+}
+.top-button__menu > .menu_1 >li a {
+    font-size: 13px;
+    margin-right: 9px;
+}
+
+.top-button__menu > .menu_1 >li button {
+    background-color: white;
+    border: 1px solid transparent;
+}
+
+.top-button__menu > .menu_1 >li button:hover {
+    color:blue;
+}
+.nav__bottom-button {
+    width: 1000px !important;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    z-index: 999;
+}
+
+.nav__bottom-button > .bottom-button__logo {
+    display: flex;
+    width: 110px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__bottom-button > .bottom-button__login {
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    width: 70px;
+    height: 26px;
+    margin-left: 70px;
+}
+
+.bottom-button__login > button {
+    background-color: white;
+    width: 70px;
+    height: 26px;
+    border: 1px solid #b3b3b3;
+}
+
+.bottom-button__login > button > a {
+    color: #195dae !important;
+    font-weight: bolder;
+}
+
+.bottom-button__menu {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1000px;
+    
+}
+
+.bottom-button__menu > .menu__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+}
+
+
+.bottom-button__menu > .menu__main > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bottom-button__menu > .menu__main > li >a {
+    display: flex;    
+    align-items: center;
+    font-size: 20px;
+    padding: 0px 20px 0px 25px;
+}
+
+.menu__main > li {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    padding: 20px;
+}
+
+.w1 {
+    display: block;
+}
+
+.menu__main a:hover{
+    color: orange !important;
+}
+
+.menu__main .sub-menu {
+    display: none;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 80px ;
+    border: 1px solid orange ;
+}
+
+.menu__main li a:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu > li {
+    padding: 10px;
+ }
+ 
+ .sub-menu li:hover {
+     background-color: rgb(255, 255, 255);
+ }

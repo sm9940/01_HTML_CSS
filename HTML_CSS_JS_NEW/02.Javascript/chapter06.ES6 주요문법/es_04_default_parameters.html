@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //es6 이전 버전에서는 매개변수에 값이 들어오지 않으면 undefined 출력
+         const myFunc1 = (name, age) => `안녕 ${name} 너의 나이는 ${age}살 이니?`
+
+         console.log(myFunc1('영희'))
+
+         //es6 버전 이후에서는 매개변수에 초기값을 줄 수 있음
+         const myFunc2 = (name = '영희', age = 22) => `안녕 ${name} 너의 나이는 ${age}살 이니?`
+         console.log(myFunc2())
+      </script>
+   </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //윤년을 확인하는 함수
+        /*
+            2월 29일까지 있는 날
+
+            윤년의 특징
+            4로 나누어 떨어지면서 100으로 나누어 떨어지지 않고
+            400으로 나누어 떨어짐
+        */
+       function isLeapYear(year) {
+            //매개 변수 year: 입력받는 년도
+            
+            // 윤년 계산
+            //★리턴값에 계산식을 넣으면 결과값이 동일하게 출력된다
+            var y = (year % 4 === 0 && year % 100 !== 0 )|| year % 400 === 0
+            var str = ''
+            if (y) {
+                str = '윤년입니다'
+            }  else {
+                str = '윤년 아닙니다'
+            }    
+            return str  //true, false의 결과값을 리턴
+       }
+
+       const result = isLeapYear(2020)
+
+       console.log(`2020년은 윤년인가요? ${(result)}`)
+       console.log(`2010년은 윤년인가요? ${isLeapYear(2010)}`)
+       console.log(`2000년은 윤년인가요? ${isLeapYear(2000)}`)
+       console.log(`1900년은 윤년인가요? ${isLeapYear(1900)}`)
+    </script>
+</body>
+</html>

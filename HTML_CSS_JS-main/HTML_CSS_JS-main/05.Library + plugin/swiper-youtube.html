@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      .wrap {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      .wrap * {
+        box-sizing: inherit;
+      }
+      .wrap-inner {
+        /*   height: 0;
+  padding-bottom: 56.25%;
+  margin: 0 auto;
+  overflow: hidden;  
+  width: 100%;
+  position: relative; */
+      }
+
+      .swiper-outter {
+        width: 100%;
+        padding: 0 65px;
+        position: relative;
+      }
+
+      .swiper-container {
+        width: 100%;
+        position: relative;
+      }
+      .swiper-wrapper {
+        width: 100%;
+      }
+      .swiper-slide {
+        width: 100%;
+        background-color: #efefef;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+      }
+      .swiper-slide .video-container {
+        width: 100%;
+        height: 0;
+        position: relative;
+        padding-bottom: 56.25%;
+      }
+      .swiper-slide .video-container iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      /*
+.swiper-slide {
+  background: #fff;
+  text-align: center;
+  position: relative;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 67%;
+  width: 100%;
+  height: 0;
+}
+.video-play,
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  pointer-events: none;
+}
+*/
+    </style>
+  </head>
+
+  <body>
+    <body>
+      <div class="wrap">
+        <div class="wrap-inner">
+          <div class="swiper-outter">
+            <div id="video-swiper" class="swiper mySwiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="video-container">
+                    <div class="yt-player" data-id="MxBRpWcXeOA"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="video-container">
+                    <div class="yt-player" data-id="IKw25_XI1nA"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="video-container">
+                    <div class="yt-player" data-id="yciFX_zbdFs"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </body>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement("script");
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      function onYouTubeIframeAPIReady() {
+        // Check all slides and initialize video players
+        var swiper = document.getElementById("video-swiper");
+        var slides = swiper.getElementsByClassName("swiper-slide");
+
+        var players = [];
+
+        for (var i = 0; i < slides.length; i++) {
+          var element = slides[i].getElementsByClassName("yt-player")[0];
+          var id = element.getAttribute("data-id");
+
+          var player = new YT.Player(element, {
+            height: "315",
+            width: "560",
+            videoId: id,
+            playerVars: {
+              autoplay: true,
+              color: "#7fbc03",
+              modestbranding: true,
+              rel: 0,
+            },
+            // events: {
+            //   'onReady': onPlayerReady,
+            //   'onStateChange': onPlayerStateChange
+            // }
+          });
+          players.push(player);
+        }
+
+        var mySwiper = new Swiper(".swiper-container", {
+          effect: "slide",
+          spaceBetween: 0,
+          slidesPerView: 1,
+          centeredSlides: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          on: {
+            slideChange: function () {
+              //players[mySwiper.previousIndex].pauseVideo();
+              players[mySwiper.activeIndex].playVideo();
+            },
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

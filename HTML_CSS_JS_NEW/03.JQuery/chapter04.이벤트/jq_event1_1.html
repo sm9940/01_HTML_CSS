@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <p>
+         <button class="btn1">버튼1</button>
+      </p>
+      <p>내용1</p>
+      <p>
+         <button class="btn2">버튼2</button>
+      </p>
+      <p>내용2</p>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         //1. 기본적인 이벤트 작성방식(단독 이벤트 등록)
+         // $('.btn1').click(function () {
+         //    $('.btn1').parent().next().css('color', 'red')
+         // })
+         $('.btn1').click(function () {
+            $('.btn1').parent().next().css('color', 'red')
+         })
+
+         //2. on 방식으로 이벤트 작성(그룹 이벤트 등록)
+         // $('.btn2').on({
+         //    'mouseover focus': function () {
+         //       $('.btn2').parent().next().css('color', 'red')
+         //    },
+         //    'mouseout blur': function () {
+         //       $('.btn2').parent().next().css('color', 'black')
+         //    },
+         // })
+
+         $('.btn2').on({
+            'mouseover focus': function () {
+               $('.btn2').parent().next().css('color', 'red')
+            },
+            'mouseout blur': function () {
+               $('.btn2').parent().next().css('color', 'black')
+            },
+         })
+      </script>
+   </body>
+</html>

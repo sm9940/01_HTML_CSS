@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         const forecastURL =
+            'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=qLUMgTkv%2FQtl7DQWBqO4gyLRhJDV1pjd%2B5BP4xzpzk3xjFbJAHhM8oDNuIUkS8D9dDWO721JDO%2FRwInsXS2UJA%3D%3D&numOfRows=1000&pageNo=1&base_date=20240124&base_time=1000&nx=67&ny=142&dataType=JSON'
+         $.ajax({
+            crossDomain: true,
+            type: 'GET',
+            url: forecastURL,
+            dataType: 'json',
+            success: function (data) {
+               const items = data.response.body.items.item
+
+               for (let item of items) {
+                  switch (item.category) {
+                     case 'PTY': // 강수형태
+                        console.log('강수형태: ', item.obsrValue)
+                        break
+                     case 'REH':
+                        console.log('습도', item.obsrValue)
+                        break
+                     case 'RN1':
+                        console.log('1시간 강수량', item.obsrValue)
+                        break
+                     case 'T1H':
+                        console.log('기온', item.obsrValue)
+                        break
+                     case 'UUU':
+                        console.log('동서바람성분', item.obsrValue)
+                        break
+                     case 'VEC':
+                        console.log('풍향', item.obsrValue)
+                        break
+                     case 'VVV':
+                        console.log('남북바람성분', item.obsrValue)
+                        break
+                     case 'WSD':
+                        console.log('풍속', item.obsrValue)
+                        break
+                  }
+               }
+            },
+            error: function (request, status, error) {
+               console.log('code:' + request.status)
+               console.log('message:' + request.responseText)
+               console.log('error:' + error)
+            },
+         })
+      </script>
+   </body>
+</html>

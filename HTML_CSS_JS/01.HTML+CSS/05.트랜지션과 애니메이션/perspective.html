@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body {
+            background: url('./images/xyz.png') center center no-repeat;
+        }
+      		.origin{
+			width: 152px;
+			height: 180px;
+			border: 1px solid black;
+			margin: 30px;
+			float: left;  
+		}
+		.origin > div {
+			width: 152px;
+			height: 180px;
+		}
+
+        .rotatex:hover {
+            transform: rotatex(50deg);
+        }
+        #pers {
+            /* perspective 값이 클수록 사용자하고 멀어진다 */
+            /* perspectives는 부모 태그에 적용을 시킨다 */
+            perspective: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="origin">
+		<div class="rotatex">
+			<img src="images/sunset.jpg" alt=".">
+		</div>
+	</div>
+	<div class="origin" id="pers">
+		<div class="rotatex">
+			<img src="images/sunset.jpg" alt=".">
+		</div>
+	</div>
+</body>
+</html>

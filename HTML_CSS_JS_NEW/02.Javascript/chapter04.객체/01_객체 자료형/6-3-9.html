@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const cloud = {
+            name: '구름',
+            age: 6,
+            kind: '강아지',
+         }
+
+         const star = {
+            ...cloud,
+            name: '별',
+            age: 1,
+            vaccin: true, //예방접종 여부
+         }
+         //★rest spread 데이터 위에 추가시 : 기존 데이터를 덮어쓰지 X, 없던 데이터는 추가가 된다
+         //★rest spread 데이터 아래 추가시 : 기존 데이터로 덮어쓴다, 없던 데이터는 추가가 된다
+         console.log(cloud)
+         console.log(star)
+      </script>
+   </body>
+</html>

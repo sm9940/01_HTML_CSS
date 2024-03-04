@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline-block ;
+            margin: 10px;
+        }
+
+        li a {
+            padding: 5px 20px;
+            font-size: 14px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        .flat {
+            background-color: #eee;
+            border: 1px solid #222;
+        }
+
+        /* 3. 속성 선택자 
+        [속성~=값]
+        지정한 속성값이 포함된 태그를 선택한다
+        */
+        /* a태그면서 class 속성값에 button을 포함하는 태그선택 */
+        a[class ~= 'button'] {
+            box-shadow: rgba(0,0,0, 0.4) 4px 4px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+		<li><a href="#" class="flat">메뉴 1</a></li>
+		<li><a href="#" class="flat">메뉴 2</a></li>
+		<li><a href="#" class="button">메뉴 3</a></li>
+		<li><a href="#" class="flat button" >메뉴 4</a></li>
+	</ul>
+</body>
+</html>

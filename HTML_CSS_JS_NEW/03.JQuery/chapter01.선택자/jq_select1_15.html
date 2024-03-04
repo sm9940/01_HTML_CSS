@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1 class="title">선택자</h1>
+      <div>
+         <div>
+            <p class="txt1">내용</p>
+         </div>
+      </div>
+      <script src="./jquery-3.7.1.min.js"></script>
+      <script>
+         //closest(선택자) : 선택자를 기준으로 가장 가까운 상위태그를 선택한다
+         $('.txt1').closest('div').css('border', '2px solid red')
+      </script>
+   </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         body {
+            height: 10000px;
+            width: 5000px;
+         }
+         #wrap {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="wrap">
+         <p>scrollTop: <span class="top">0</span>px</p>
+         <p>scrollLeft: <span class="left">0</span>px</p>
+
+         <button class="btn">결과</button>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         $(window).on('scroll', function () {
+            var sc_top = $(this).scrollTop()
+            var sc_left = $(this).scrollLeft()
+
+            $('.top').text(sc_top)
+            $('.left').text(sc_left)
+
+            console.log('window:', $(this))
+         })
+
+         $('.btn').click(function () {
+            console.log('btn:', $(this))
+            $(this).append('<p>안녕하세요</p>')
+         })
+         //이벤트에서 this는 이벤트가 발생한 대상을 가르킨다
+
+         console.log(this.screen.width)
+         //객체에서의 this
+         //객체가 가지고 있는 속성을 가르킨다 -> 이 객체가 가지고 있는 name..
+         const obj = {
+            name: '흰둥이',
+            age: 13,
+            func: function () {
+               console.log(this.name + '의 나이는 ' + this.age)
+            },
+         }
+
+         obj.func()
+      </script>
+   </body>
+</html>

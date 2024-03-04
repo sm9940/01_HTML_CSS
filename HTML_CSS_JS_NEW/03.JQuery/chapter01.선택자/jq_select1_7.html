@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <ul id="wrap">
+         <li>
+            리스트1
+            <ul>
+               <li id="list_1">리스트1-1</li>
+               <li>리스트1-2</li>
+            </ul>
+         </li>
+         <li>리스트2</li>
+         <li>리스트3</li>
+      </ul>
+      <script src="./jquery-3.7.1.min.js"></script>
+      <script>
+         //parent(): 부모 태그를 선택한다
+         // $('#list_1').parent().css('border', '1px solid red')
+         //parents() : 모든 상위태그를 선택한다
+         $('#list_1').parents().css('border', '1px solid red')
+      </script>
+   </body>
+</html>

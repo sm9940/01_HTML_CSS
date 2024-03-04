@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(./images/xyz.png) center center no-repeat;
+        }
+        		#container{
+				width:600px;
+				margin:20px auto;
+			}
+			.origin {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				float: left;
+				margin: 40px;
+			}
+			.origin > div {				
+				width:100px;
+				height:100px;
+				background-color:orange;
+                transition: 3s;
+			}
+            #skewx:hover {
+                /* x축으로 30도 비틀기 */
+                transform: skewX(30deg);
+            }
+            #skewy:hover {
+                /* y축으로 30도 비틀기 */
+                transform: skewY(30deg);
+            }
+            #skewxy:hover {
+                /* x축, y축 비틀기 */
+                transform: skew(30deg, 30deg);
+            }
+    </style>
+</head>
+<body>
+    <div id="container">		
+        <div class="origin">
+            <div id="skewx"></div>
+        </div>
+        <div class="origin">
+            <div id="skewy"></div>
+        </div>
+        <div class="origin">
+            <div id="skewxy"></div>
+        </div>
+    </div>
+</body>
+</html>

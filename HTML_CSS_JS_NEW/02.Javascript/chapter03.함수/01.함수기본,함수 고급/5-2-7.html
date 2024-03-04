@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //setTimeout: 특정 시간 뒤에 함수를 실행
+        //1초 = 1000
+        //변수명 = () => {}
+        setTimeout(()=>{console.log('2초 뒤에 실행됩니다') },2000)
+        //변수명 = function() {}
+        setTimeout(function() {console.log('3초 뒤에 실행됩니다')},3000)
+        //setInterval: 특정 시간마다 함수를 실행
+        let count = 0
+        setInterval(() => {
+        console.log(`4초마다 실행됩니다.(${count}번째)`)
+        count++},4000)
+    </script>
+</body>
+</html>

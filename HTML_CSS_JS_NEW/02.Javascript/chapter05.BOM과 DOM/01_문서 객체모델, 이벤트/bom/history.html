@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <button onclick="back('뒤로')">뒤로!</button>
+      <button onclick="re('새로고침')">새로고침</button>
+
+      <script>
+         //뒤로가기 함수
+         function back(str) {
+            console.log(`${str}갑니다`)
+            //양수: 앞으로 가기, 음수: 뒤로가기
+            /*
+            history.go(2) : 현재 페이지에서 2페이지 앞으로 이동
+            history.go(-2) : 현재 페이지에서 2페이지 뒤로 이동
+            */
+
+            history.go(-1) //뒤로가기
+            //history.back() //뒤로가기 두번째 방법
+         }
+         //새로고침 함수
+         function re(str) {
+            console.log(`${str}합니다.`)
+            history.go(0) //새로고침 첫번째 영업
+            location.reload()
+         }
+      </script>
+   </body>
+</html>

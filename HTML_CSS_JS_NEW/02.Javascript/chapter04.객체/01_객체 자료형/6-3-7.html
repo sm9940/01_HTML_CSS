@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //JSON의 rest spread : JSON에 맞는 값을 복사할 때 사용
+
+         //1.얕은 복사(참조)
+
+         const cloud = {
+            name: '구름',
+            age: 6,
+            kind: '강아지',
+         }
+
+         // const star = cloud
+
+         const star = { ...cloud }
+         star.name = '별'
+         star.age = 1
+
+         console.log(cloud)
+         console.log(star)
+      </script>
+   </body>
+</html>

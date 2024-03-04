@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         var arr1 = [
+            {
+               area: '서울',
+               name: '무대리',
+            },
+            {
+               area: '부산',
+               name: '홍과장',
+            },
+            {
+               area: '대전',
+               name: '박사장',
+            },
+            {
+               area: '서울',
+               name: '빅마마',
+            },
+         ]
+         // 자바스크립트 map과 살짝 문법모양만 다르다.
+         // var arr2 = $.map(arr1, function (value, index) {
+         //    if (value.area === '서울') {
+         //       value.dept = '개발부'
+         //       return value // return해주는값을 변수에 배열로 저장한다.
+         //    }
+         // })
+         // console.log(arr2)
+         var arr2 = $.map(arr2, function (value, list) {
+            if (value.area === '서울') {
+               value.dept = '개발부'
+               return value
+            }
+         })
+         console.log(arr2)
+         // //filter: return 식이 true일때 그값을 변수에 저장.
+         // var arr3 = $.grep(arr1, function (value, index) {
+         //    if (value.area === '서울') return true
+         //    else return false
+         // })
+      </script>
+   </body>
+</html>

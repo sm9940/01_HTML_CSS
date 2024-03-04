@@ -1,0 +1,8 @@
+1.block: width, height 적용되고 margin도 적용된다
+  inline: width,height 적용이 안되고, margin은 좌우 적용이 된다
+  inline-block: width,height 적용이 되고, margin은 상하 좌우 적용이 된다.
+  2. margin:10px 20px 30px 설정시 10px는 위 20px는 좌우 30px는 아래가 margin값이 적용된다
+  3. 사용자가 보이는 가시영역
+  4. absolute는 부모태그의 기준으로 이동한다
+     relative는 뷰포트를 기준으로 이동한다.
+  5. div1에서 box-sizing을 border-box로 설정해서 같은 크기라도 div1은 margin값과 padding값 등이 다 포함된 값이기 때문에 더 작다

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h2>좋아하는 색</h2>
+      <label> <input type="radio" name="color" value="red" /> 빨강 </label>
+      <label> <input type="radio" name="color" value="yellow" /> 노랑 </label>
+      <label> <input type="radio" name="color" value="green" checked /> 초록 </label>
+
+      <h2>좋아하는 동물</h2>
+      <label> <input type="checkbox" name="list" value="dog" /> 강아지 </label>
+      <label> <input type="checkbox" name="list" value="cat" checked /> 고양이 </label>
+      <label> <input type="checkbox" name="list" value="rabbit" checked /> 토끼 </label>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+      <script>
+         var colorVar = $('input[name=color]:checked').val()
+         console.log(colorVar)
+
+         $('input[name=list]:checked').each(function (index, list) {
+            var listVar = $(list).val()
+            console.log(listVar)
+         })
+
+         /*혹은
+
+         $('input[name=list]:checked').each(function () {
+            var listVar = $(this).val()
+            console.log(listVar)
+         })
+         */
+      </script>
+   </body>
+</html>

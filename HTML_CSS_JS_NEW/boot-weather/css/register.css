@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+main {
+   /* nav바의 height: nav바에 가려져서 안보이는 현상 해결 */
+   margin-top: 56px;
+}
+
+main > section {
+   padding: 40px 0;
+}

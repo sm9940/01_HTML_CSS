@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //기본 자료형을 객체로 만드는 방법
+        //const 객체 = new 객체 자료형 이름()
+
+        //1. 숫자 자료형 객체
+
+        const f = new Number(273.2323424) //const f = 273
+
+       // f.sample = 10
+       // console.log(f.sample)
+
+        //toFixed() 함수(메소드 = 기능)
+
+        console.log(`f값: ${f}`)
+
+        console.log(f.toFixed(0))
+
+        const num = 332.4567
+
+        console.log(`객체가 아닌 num: ${num.toFixed(2)}`)
+
+        // 일시적 승급: 기본 자료형에서 메소드(함수), 속성을 사용할 수 있도록 하는 것
+
+        //2. 문자 자료형 객체
+
+        const str = new String('안녕하세요') // const str = '안녕하세요'
+
+        str.sample = 11
+        console.log(str.sample)
+
+        //3. 불린 자료형 객체
+
+        const bool = new Boolean(true) // const bool = true
+        bool.sample =12
+        console.log(bool.sample)
+    </script>
+</body>
+</html>

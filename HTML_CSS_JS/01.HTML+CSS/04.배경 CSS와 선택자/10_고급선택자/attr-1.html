@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;          
+        }
+        li {
+            display: inline-block;
+            width: 120px;
+            margin: 10px;
+        }
+        
+        li a {
+            padding: 5px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        /* 1.속성선택자 
+        [속성]
+        */
+        /* a 태그면서 href 속성을 가진 태그 */
+        a[href] {
+            background-color: yellow;
+            font-weight: normal;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a>메인메뉴: </a></li>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+    </ul>
+</body>
+</html>

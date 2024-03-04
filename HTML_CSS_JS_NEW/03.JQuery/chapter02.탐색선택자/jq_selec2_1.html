@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1>탐색 선택자</h1>
+      <ul id="menu">
+         <li>내용1</li>
+         <li>내용2</li>
+         <li>내용3</li>
+         <li>내용4</li>
+      </ul>
+
+      <ul id="menu2">
+         <li>내용2-1</li>
+      </ul>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         // 첫번째 요소를 선택
+         //$(`#menu li:first`).css(`background-color`, 'red')
+
+         //마지막 요소를 선택
+         //$('#menu li:last').css('background-color', 'blue')
+
+         //짝수번째 요소를 선택(인덱스번호 기준 0,1,2,3,... 0부터 시작)
+         //  $(`#menu li:even`).css(`background-color`, 'red')
+
+         //홀수번째 요소를 선택
+         //  $(`#menu li:odd`).css(`background-color`, 'blue')
+
+         //해당 인덱스 번호와 같은 요소를 선택 // .eq(2) 앞의 선택자 태그와 같으면서 2번째 태그 선택.
+         //  $(`#menu li`).eq(2).css(`background-color`, 'yellow')
+
+         //less than : ~보다 작은 // 2번인덱스보다 작은 요소를 선택
+         //  $(`#menu li:lt(2)`).css(`background-color`, 'yellow')
+
+         //greater than: ~ 보다 큰 // 2번 인덱스 보다 큰 요소를 선택
+         //  $(`#menu li:gt(2)`).css(`background-color`, 'yellow')
+
+         $('li:only-child').css('background-color', 'blue') // li 중에서 형제들이 없고, 외동인 아이
+
+         //slice(시작 인덱스, 끝 인덱스): 시작부터 끝 인덱스 직전까지 자른다 //slice(1,3)인덱스번호기준으로 1번부터 3번직전까지 자른다.
+         $('#menu li').slice(1, 3).css('background-color', 'red')
+
+         $('#menu li').slice(2).css('background-color', 'red') //slice(시작인덱스) 인덱스 번호 하나만 있으면 시작인덱스 부터 끝까지 자른다.
+      </script>
+   </body>
+</html>

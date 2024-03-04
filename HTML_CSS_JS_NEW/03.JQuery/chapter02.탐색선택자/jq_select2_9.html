@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         var arr1 = ['서울', '대전', '부산', '전주']
+         var arr2 = ['한국', '미국', '일본', '중국']
+         var obj = {
+            name: '정부장',
+            area: '서울',
+         }
+         // inArray(찾을데이터, 찾을배열, 시작인덱스까지올수있음) 찾으려는값이 없으면 -1 출력
+         var idxNum = $.inArray('부산', arr1) //'부산'이라는 데이터가 arr1의 몇번째 인덱스에 있는가
+         console.log(idxNum)
+
+         //isArray(데이터) : 데이터가 배열인지? 배열이면 true, 배열이 아니면 false.
+         console.log($.isArray(arr1))
+         console.log($.isArray(obj))
+
+         //merge(1배열,2배열): 1배열에 2배열을 합침. 아마 자바스크립트에도 merge와 비슷한게 있을것임.
+         $.merge(arr2, arr1) //처음에오는 arr2배열에 arr1배열을 합친 배열을 만든다.
+         console.log(arr2)
+         console.log(arr2) //arr2에 merge를 써서 합쳐진것이기 떄문에 arr1배열은 출력하면 그대로임.
+      </script>
+   </body>
+</html>

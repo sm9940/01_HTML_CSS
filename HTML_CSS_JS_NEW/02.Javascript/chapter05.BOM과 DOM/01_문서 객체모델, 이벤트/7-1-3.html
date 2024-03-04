@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1 id="head" class="main">HEADERS</h1>
+
+      <div class="container">
+         <p class="para">안녕하세요, 반가워요.</p>
+      </div>
+      <!-- 자바스크립트 -->
+      <script>
+         const header = document.querySelector('#head')
+
+         header.style.color = 'white'
+         header.style.backgroundColor = 'black'
+         header.style.padding = '10px'
+         header.style.fontSize = '30px'
+
+         const container = document.querySelector('.container')
+         //color 레드로 바꾸기
+         container.style.color = 'red'
+         //margin 20px 주기
+         container.style.margin = '20px'
+      </script>
+   </body>
+</html>

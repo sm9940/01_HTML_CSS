@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+* li {
+    list-style: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;    
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+
+.main{
+    overflow: hidden;
+    /* 이 사이즈보다 작아지면 안된다 -> 최소 1200px 보다 작으면 x */
+    min-width: 1200px;
+
+}
+
+/* 헤더 */
+.header__menu{
+    height: 80px;
+    position: relative;
+}
+/* 메인 */
+.main{
+    width: 1200px;
+    height: 2450px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.main__search{
+    height: 300px;
+    
+}
+.main__reservation{
+    height: 150px;
+}
+.main__discount{
+    height: 450px;
+}
+.main__benefit{
+    height: 300px;
+}
+.main__helper{
+    height: 200px;
+}
+.main__helper__list{
+    display: flex;
+    width:100%;
+    height: 200px;
+}
+.list__1{
+    display: flex;
+    width:100%;
+}
+.list__1 li{
+    display: inline-block;
+    width: 33%;
+    height: 200px
+}
+.main__qatar{
+    height: 250px;
+}
+.main__banner{
+    height: 300px;
+}
+
+.list__2{
+    display: flex;
+    width:100%;
+    height: 100%;
+}
+.list__2__img{
+    display: block;
+    width: 900px;
+}
+
+.list__2__file{
+    display: block;
+    width: 300px;
+}
+.main__option{
+    height: 150px;
+}
+.main__group{
+    height: 350px;
+}
+.main__group__list{
+    display: flex;
+    width:100%;
+    height: 100%;
+}
+.list__3{
+    display: flex;
+    width:100%;
+    height: 100%;
+}
+.list__3 li{
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+}
+/* 푸터 */
+.footer__exp{
+    height: 350px;
+}

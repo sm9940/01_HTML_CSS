@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1></h1>
+      <textarea cols="30" rows="10"></textarea>
+      <hr />
+      <input type="text" />
+      <button type="button">클릭</button>
+      <script>
+         const textarea = document.querySelector('textarea')
+         const h1 = document.querySelector('h1')
+         const input = document.querySelector('input')
+         const button = document.querySelector('button')
+
+         //키보드에서 손을 뗄때 이벤트를 발생 시킴
+         textarea.addEventListener('keyup', () => {
+            console.log(textarea.value)
+            const length = textarea.value.length //문자열의 길이
+
+            h1.textContent = `글자 수: ${length}`
+         })
+
+         button.addEventListener('click', () => {
+            console.log(input.value)
+         })
+      </script>
+   </body>
+</html>

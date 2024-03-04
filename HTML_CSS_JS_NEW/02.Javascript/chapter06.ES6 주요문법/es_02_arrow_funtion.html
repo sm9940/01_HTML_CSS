@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ES5 버전 함수 형태
+        function myFunc1(name) {
+            return name
+        }
+
+        const myFunc1_n = function(name) {
+            return name
+        }
+
+        console.log(myFunc1('이승민'))
+        console.log(myFunc1_n('이승민'))
+        //ES6 버전 화살표 함수 형태
+        // 변수명 = (매개변수) => {}
+        const myFunc2 = (name) => {
+            return name
+        }
+        console.log(myFunc2('이승민'))
+
+        const sum = (a,b) => {
+            return a+b
+        }
+
+        console.log(sum(5,6))
+
+        //리턴값이 하나일때는 중괄호, return 생략가능
+
+        const myFunc3 = (name) => name
+        
+        console.log(myFunc3('이승민'))
+    </script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+/* 초기화 스타일 */
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0.9rem !important;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* ★부트스트랩 사용시 부트스트랩 속성값이 적용되는 부분은 important를 적용 */
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+p {
+    margin: 0 !important;
+}
+/*고정 레이아웃 만들기 위해 반드시 작성 */
+.wrap {
+    overflow: hidden;
+    min-width: 1200px;
+}
+
+/* 헤더 */
+
+header {
+    position: relative;
+    height: 75px;
+    border-bottom: 1px solid rgb(193, 193, 193);
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    /* ★ 가운데 정렬, width를 반드시 같이 준다 */
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    
+}
+.nav__logo{
+    /* a태그는 인라인 태그이므로 width를 주기 위해 block태그로 바꿈 */
+    display: block;
+    width: 150px;
+
+}
+.nav__top-button{
+    width: 500px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav__top-button > .nav-link {
+    color: black;
+}
+
+.nav__menu{
+    /* ★ 수평정렬 방법 3가지:float, inline-block,flex  */
+    display: flex;
+    width: 550px;
+    /* align-items:수직에서 가운데 정렬,align-content: 수직에서 가운데 정렬, 두줄이상 정렬 */
+    align-items: center;
+    /* justify-content: 수평에서 정렬 */
+    justify-content: flex-end;
+}
+
+.nav__menu li { 
+    padding: 0 10px;
+}
+
+
+.nav__top-button> .dropdown-menu {
+    width: 400px;
+    }
+
+.nav__top-button> .dropdown-menu > li {
+    padding: 5px 5px;
+}
+
+.nav__top-button> .dropdown-menu > li > a {
+    font-size: 0.9rem ;
+    font-weight: bold ;
+}
+
+.nav__top-button> .dropdown-menu > li > a:hover {
+    background-color: rgba(192, 230, 245, 0.438);
+}
+/* 메인 */
+main {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 1200px;
+}
+.main-section{
+    margin: 30px 0;
+}
+
+.main__top{
+height: 260px;
+}
+
+.tab-pane__sub {
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.tab-pane__sub > div { 
+    display: flex;
+    /* x축(주축)에서 가운데 정렬 */
+    justify-content: center;
+}
+
+.btn-main {
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    margin: 15px 5px;
+    font-size: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.btn-main > div:nth-child(2) {
+    padding: 15px ;
+}
+.btn-main > ul {
+    padding-left: 15px !important;
+}
+.sso__content{
+    height: 60px;
+    background-color: #343b53;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.sso__content >p:nth-of-type(1) {
+    width: 80px;
+    text-align: center;
+}
+.sso__content >p:nth-of-type(2) {
+    width: 1120px;
+    margin: 0 auto !important;
+    
+}
+.sso__content >p:nth-of-type(2)>a{
+    color:white !important;
+    text-decoration: underline !important;
+    margin: 0 auto !important;
+}
+
+.banner1__content{
+    height: 500px;
+    background: linear-gradient(rgba(1, 2, 23, 0.5), rgba(0, 0, 0, 0.2)),url(../images/banner1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% 100% ;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    }
+.banner1__content>div:nth-child(1){
+    
+    width: 500px;
+    padding: 70px 40px ;
+}
+.banner1__content>div:nth-child(1)> .btn {
+    margin-top: 20px !important;
+}    
+.banner1__content>div:nth-child(2){
+    width: 700px;
+}    
+
+.banner2__content{
+height: 260px;
+display: flex;
+border: 1px solid black;
+border-radius: 10px;
+}
+.banner2__content>div:nth-child(1){
+    background: url(../images/banner2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px 0 0 10px;
+    width: 400px;
+}
+.banner2__content>div:nth-child(2){
+    width: 550px;
+    padding: 5px 15px;
+}
+.banner2__content>div:nth-child(3){
+    width: 250px;
+   padding: 50px 0 ;
+   /* 블록 태그안에서 인라인태그 정렬 가능 */
+   text-align: center;
+}
+
+
+.main__travel-helper >h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.travel-helper__content {
+    height: 80px;
+    display: flex;
+}
+.btn-helper{
+    border: 1px solid gray;
+    width: 33.33%;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 14px;
+    text-align: left;
+    /* 커서 모양 바꾸기 */
+    cursor: pointer;
+}
+.btn-helper > div {
+    display: flex;
+    align-items: center;
+    height: 50%;
+}
+
+.btn-helper>div>div:nth-child(1) {
+    width: 70%;
+    font-size: 20px;
+}
+
+.btn-helper>div>div:nth-child(2) {
+ width: 30%;
+ text-align: right;
+}
+
+
+.banner3__content{
+    height: 190px;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* display:block 처럼 인라인태그에 width, height, margin 등을 적용가능하게 해준다. */
+    display: flex;
+    cursor: pointer;
+}
+
+.banner3__content> div:nth-child(1){
+    background: url(../images/banner3.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 55%;
+    border-radius: 10px 0 0 10px;
+}
+.banner3__content>div:nth-child(2){
+    width: 45%;
+    padding: 10px 20px;
+}
+.banner3__content>div:nth-child(2)>div:nth-child(2){
+font-size: 20px;
+}
+
+.main__early-reservation > h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 5px;
+}
+.main__early-reservation > div {
+    display: flex;
+}
+.early-reservation1 {
+    border-radius: 10px;
+    height: 250px;
+    width: 1000px;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(5, 1, 20, 0.8)) ,url(../images/early1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 10px;
+}
+
+.main__more{
+height: 60px;
+}
+.main__more > div {
+    text-align: center;
+    padding: 20px 0;
+}
+.main__more  a {
+    color: blue !important;
+}
+.main__more a:hover {
+    text-decoration: underline !important;
+}
+
+/* 푸터 */
+footer {
+    height: 600px;
+}
+
+.footer_content{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer_content> div:nth-child(1){ border-bottom: 1px solid rgb(193, 193, 193); }
+
+.sitemap {
+    display: flex;
+}
+.sitemap > li {
+    width: 300px;
+    padding: 10px;
+}
+
+.sitemap > li > ul {
+    padding-top: 10px;
+}
+
+.sitemap > li > ul > li {
+    padding: 7px 0 ;   
+}
+
+.sitemap > li > ul > li > a {
+    color: blue !important;
+    font-size: 12px;
+}
+
+.footer_content > div:nth-child(2) {
+    padding-top: 60px;
+}
+ /* 지원버튼 */
+.support {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 80px;
+    height: 35px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px 2px rgb(193, 193, 193);
+    text-align: center;
+    color: rgb(21, 21, 150 );
+    line-height: 35px;
+}
+
+.support:hover {
+    background-color: lightskyblue;
+}
+
+/* 모달 */
+
+.modal-body {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.modal-body > h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal-body > ul a{
+    color : rgb(21,21,150) !important
+}
+
+.modal-body > ul a:hover {
+    text-decoration: underline !important;
+}

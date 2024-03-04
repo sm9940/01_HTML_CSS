@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <p><a href="http://www.easyspub.co.kr/" class="btn1">버튼1</a></p>
+      <p class="txt1">내용1</p>
+      <p><a href="http://www.easyspub.co.kr/" class="btn2">버튼2</a></p>
+      <p class="txt2">내용2</p>
+      <p><button class="btn3">버튼3</button></p>
+      <p class="txt3">내용3</p>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         $('.btn1').on('click', function (event) {
+            console.log(event) //발생한 이벤트에 대한 정보가 들어있는 객체
+            event.preventDefault() //a태그의 기본기능(링크이동)을 하지 X
+            $('.txt1').css('background-color', 'red')
+         })
+         $('.btn2').on('click', function () {
+            $('.txt2').css('background-color', 'blue')
+         })
+         $('.btn3').on('dblclick', function () {
+            $('.txt3').css('background-color', 'yellow')
+         })
+      </script>
+   </body>
+</html>

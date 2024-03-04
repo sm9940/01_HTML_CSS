@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <!-- 폰트어썸 -->
+      <link
+         rel="stylesheet"
+         href="./fontawesome-free-6.3.0-web/css/all.min.css"
+      />
+   <!-- 부트스트랩 -->
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+         crossorigin="anonymous"
+      />
+
+      <link rel="stylesheet" href="./css/common.css" />
+      <link rel="stylesheet" href="./css/register.css" />
+   </head>
+   <body>
+    <header>
+            <!-- nav바 반응형-->
+            <nav class="navbar navbar-dark bg-dark fixed-top">
+               <div class="container">
+                  <a class="navbar-brand" href="index.html"
+                     ><img src="./images/logo.svg" alt="로고" width="150"
+                  /></a>
+                  <button
+                     class="navbar-toggler"
+                     type="button"
+                     data-bs-toggle="offcanvas"
+                     data-bs-target="#offcanvasDarkNavbar"
+                     aria-controls="offcanvasDarkNavbar"
+                     aria-label="Toggle navigation"
+                  >
+                     <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div
+                     class="offcanvas offcanvas-end text-bg-dark"
+                     tabindex="-1"
+                     id="offcanvasDarkNavbar"
+                     aria-labelledby="offcanvasDarkNavbarLabel"
+                  >
+                     <div class="offcanvas-header">
+                        <h5
+                           class="offcanvas-title"
+                           id="offcanvasDarkNavbarLabel"
+                        >
+                           AccuWeather
+                        </h5>
+                        <button
+                           type="button"
+                           class="btn-close btn-close-white"
+                           data-bs-dismiss="offcanvas"
+                           aria-label="Close"
+                        ></button>
+                     </div>
+                     <div class="offcanvas-body">
+                        <ul
+                           class="navbar-nav justify-content-end flex-grow-1 pe-3"
+                        >
+                           <li class="nav-item">
+                            <li class="nav-item">
+                              <a class="nav-link" href="./register.html"><button type="button" class="btn btn-primary">회원가입</button></a>
+                           </li>
+                           <li>
+                            <hr>
+                           </li>
+                              <a
+                                 class="nav-link active"
+                                 aria-current="page"
+                                 href="#" style="color: white !important;"
+                                 >오늘</a
+                              >
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#" style="color: white !important;">일별</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#" style="color: white !important;">시간별</a>
+                           </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                           <input
+                              class="form-control me-2"
+                              type="search"
+                              placeholder="검색어를 입력"
+                              aria-label="Search"
+                           />
+                           <button class="btn btn-success"   style="width: 80px;" type="submit">
+                              검색
+                           </button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </nav>
+         </header>
+      <main class="container">
+         <section>
+            <form id="signup" name="signup" method="post" action="/test/regist">
+               <h2 style="font-size: 18px; font-weight: bold" class="region-title">
+               회원가입
+            </h2>
+            <div class="row">
+               <div class="col-md-3"></div>
+               <div class="col-md-6">
+                  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">이메일</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control inputEmail3" id="inputEmail3">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword" class="col-sm-2 col-form-label" style="font-size: 13.8px !important;">비밀번호</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control inputPassword" id="inputPassword" maxlength="15" required>
+    </div>
+  </div>
+  <div class="row mb-3">
+   <label for="inputPassword3" class="col-sm-2 col-form-label" >성별</label>
+   <div class="col-sm-10">
+      <select class="form-select form-select-xl" aria-label="Small select example" id="select">
+   <option disabled>성별</option>
+   <option value="m">남자</option>
+   <option value="w">여자</option>
+  <option value="none">선택안함</option>
+   </select>
+      </div>
+      </div>
+        <fieldset class="row mb-3">
+    <legend class="col-form-label col-sm-2 pt-0">관심사</legend>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+        <label class="form-check-label" for="gridRadios1">
+          기온
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+        <label class="form-check-label" for="gridRadios2">
+          강수량
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
+        <label class="form-check-label" for="gridRadios3">
+          풍속
+        </label>
+      </div>
+    </div>
+  </fieldset>
+   <button type="button" class="btn btn-primary" id="submit_button">회원가입</button>
+               </div>
+               <div class="col-md-3"></div>
+            </div>
+            </form>
+            
+         </section>
+      </main>
+      <footer>
+         <div>
+            <div class="container">
+               <a href="#">전 세계&nbsp;&gt;</a> <a href="#">아시아&nbsp;&gt;</a> 
+               <a href="#">대한민국</a>
+            </div>
+         </div>
+         <div>
+            <div class="container">
+               <div>
+                  © 2021 AccuWeather, Inc. "AccuWeather" and sun design are
+                  registered trademarks of AccuWeather, Inc. All Rights
+                  Reserved.
+               </div>
+               <div>
+                  <a href="#">이용 약관</a> |
+                  <a href="#">개인정보 보호정책</a> |
+                  <a href="#">쿠키 사용 정책</a> |
+                  <a href="#">TAG 공개</a>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <!-- 부트스트랩 JS -->
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+         crossorigin="anonymous"
+      ></script>
+      <script src="./js/register.js"></script>
+   </body>
+</html>

@@ -1,0 +1,113 @@
+@charset "utf-8"; /* 글자가 깨지지않게 해줌 */
+
+/* ★초기화 코드 */
+
+* li {
+    list-style: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;    
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+
+.main{
+    overflow: hidden;
+
+    /* 이 사이즈보다 작아지면 안된다 -> 최소 1200px 보다 작으면 x */
+    min-width: 1200px;
+
+}
+
+header{
+    height: 280px;
+    position: relative;
+    background-color: slateblue;
+}
+.header__search{
+    height: 200px;
+
+}
+.header__menu{
+    height: 80px;
+}
+
+
+
+/* 왼쪽컨텐츠 */
+.left{
+    width: 900px;
+    height: 2000px;
+    float: left;
+    background-color: chocolate;
+}
+.left__banner{
+    height: 150px;
+}
+.left__news{
+    height: 450px;
+}
+.left__themecast{
+    height: 2000px;
+}
+.themecast__header{
+    height: 50px;
+}
+.themecast_contents{
+    height: 1950px;
+}
+.themecast__living1,.themecast__living2{
+    height: 800px;
+}
+
+.living__list {
+    height: 100%;
+}
+.living__list li {
+    height: 20%;
+    display: flex;
+}
+.living__list__img{
+    display:block;
+    width: 250px;
+}
+.living__list__contents{
+    display: block;
+    width: 650px;
+}
+.themecast__hotclick{
+    display: flex;
+    height: 350px;
+}
+.hotclick__funding{
+    width: 33.3%;
+}
+/* aside */
+.aside__login{
+    height: 150px;
+}
+.aside__mini{
+    height: 50px;
+}
+.aside__banner{
+    height: 150px;
+}
+.aside__shopping{
+    height: 100%;
+}
+.aside{
+    width: 300px;
+    height: 2600px;
+    background-color: blue;
+    float: right;
+}
+footer{
+    height: 500px;
+    background-color: pink;
+    clear: both;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 자바스크립트는 head안에 혹은 /body위에다가 작성을 해줄수 있음 -->
+</head>
+<body>
+    
+    <script>
+        
+        var num = 5;
+        /*
+        console.log(num)
+        document.write(num)
+        */
+
+        // 1. 문자열 자료형 (작은 따옴표, 큰 따옴표 구분X)
+        var str ='안녕하세요'
+
+        // 작은 따옴표 출력시 쌍따옴표 안에 써주고, 쌍따옴표 춤력시 작은 따옴표 안에 써준다
+        //console.log("'안녕하세요'")
+        //document.write("'안녕하세요'")
+        //console.log('"안녕하세요"')
+        //document.write('"안녕하세요"')
+        
+        //document.write는 태그랑 같이 사용할 수 있다.
+        //document.write('안녕하세요. <br> 이승민 입니다.')
+        //document.write('<h1>제목1<h1>')
+
+        // 벡틱(es6문법) 
+        console.log(`안녕하세요`)   
+
+        //★ 따옴표가 붙으면 무조건 문자형
+        var num2 = '1'
+        var num3 = '2'
+        var num4 = 3
+        console.log(num2 + num3)
+
+        //★연살할때 문자형이 하나라도 있으면 전부 다 문자형으로 인식을 한다. 
+        console.log(num2 + num4+6)
+
+        // ★문자 연결 연산자
+        var say1 = '오늘은 '
+        var say2 = '춥습니다. '
+        var say3 = '내일도 '
+        var say4 = '춥습니다.'
+        var say5 = say1 + say2 + say3 + say4
+
+        console.log(say1 + say2 + say3 + say4)
+        console.log(say5)
+        // 벡틱 사용시 변수는 ${} 안에 출력
+        console.log(`${say1}덥습니다.`)
+        console.log(`${say1}${say2}${say3}${say4}`)
+
+        var html1 = '<h1>'
+            var name = '이승민'
+            var html2 = '</h1>'
+
+            document.write(html1+name+html2)
+
+            //줄바꿈, 탭
+            console.log('안녕하세요\n이승민 입니다')
+            console.log('오늘은\t춥네요')
+
+    //2.숫자형
+    
+    var a = 6, b = 4
+
+    var c = a+b
+    var d = (a + b) / 2
+    var e = a % b
+    var f = a * a 
+
+    console.log(`연산결과: c=${c}, d=${d}, e=${e}, f=${f}`)
+
+    //3.boolean 자료형(결과가 true 혹은 false)
+
+    console.log(52 < 273)
+    console.log(52 >= 273)
+    console.log(32 <= 2)
+    console.log(10 == 10)
+
+    var a =52
+    var b = 273
+    var c = a < b
+
+    console.log(a < b)
+    console.log(c)
+</script>
+</body>
+</html>

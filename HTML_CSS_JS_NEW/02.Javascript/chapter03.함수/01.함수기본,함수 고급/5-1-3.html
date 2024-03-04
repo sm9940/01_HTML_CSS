@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수의 매개변수와 리턴값
+        
+        // 함수 선언
+        function func(x, y) {
+            const g = x * y
+            return g //★ 함수 실행시 결과 값을 얻고 싶을때 반드시 값을 리턴한다
+                     //★ return을 만나는 순간 함수가 끝나고 return 아래있는 코드는 실행되지 않는다
+            console.log('연산끝!')
+        }
+
+        // 함수 실행
+        console.log(func(2,3))
+        console.log(func(3,5))
+    </script>
+</body>
+</html>

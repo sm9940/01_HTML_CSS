@@ -1,0 +1,38 @@
+/* css 초기화 코드 */
+
+* {
+margin: 0;
+padding: 0;
+/* border + padding 포함해서 width, height 지정 */
+box-sizing: border-box;
+}
+#container {
+    width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+#header {
+    background-color: aqua;  
+    height: 120px;
+    line-height: 120px;
+}
+#sidebar {
+background-color: brown;
+float: left;
+width: 300px;
+height: 600px;
+line-height: 600px;
+}
+#content {
+background-color: chartreuse;
+float: right;
+width: 900px;
+height: 600px;
+line-height: 600px;
+}
+#footer {
+background-color: cornflowerblue;
+clear: both;
+height:100px;
+line-height: 100px;
+}

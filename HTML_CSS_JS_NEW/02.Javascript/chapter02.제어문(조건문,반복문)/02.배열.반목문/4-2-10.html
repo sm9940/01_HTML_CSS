@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i=0; true; i++) {
+            console.log(`${i} 번째 반복문 입니다`)
+        
+            const isContinue = confirm('계속 하시겠습니까?')
+            //break: 반복문을 종료할때 쓰인다, break문 실행시 아래있는 코드는 실행하지 않고 반목문을 나온다
+            if(!isContinue) break
+        }
+
+        console.log('프로그램 종료')
+    </script>
+</body>
+</html>

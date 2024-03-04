@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         body {
+            width: 500px;
+            margin: 30px auto;
+         }
+         .outer {
+            width: 200px;
+            height: 200px;
+            background: Orange;
+            padding: 50px;
+            margin: 10px;
+         }
+
+         .inner {
+            width: 100%;
+            height: 100%;
+            background: Pink;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="outer">
+         <div class="inner"></div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         //javascript도 동일한 개념
+
+         $('.outer').mouseover(function () {
+            $('body').append('<p>마우스오버가 발생했습니다</p>')
+         })
+         $('.outer').mouseenter(function () {
+            $('body').append('<p>마우스엔터</p>')
+         }) //상위태그든 하위태그든 한번만
+      </script>
+   </body>
+</html>

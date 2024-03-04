@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script
+         src="https://code.jquery.com/jquery-3.7.1.min.js"
+         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"
+      ></script>
+      <script>
+         const currentURL = location.href //전체주소
+         const urlObj = new URL(currentURL)
+         const params = urlObj.searchParams
+
+         const id = params.get('id') // id 파라메터 값 가져오기
+
+         let moviesURL = `https://api.themoviedb.org/3/movie/${id}?language=ko-KR&page=1&region=KR`
+
+         $.ajax({
+            crossDomain: true,
+            type: 'GET',
+            url: moviesURL,
+            dataType: 'json',
+            headers: {
+               //headers: 서버에 정보를 알려준다.
+               accept: 'application/json',
+               Authorization:
+                  'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDk1NGE5MWZhMzVmMzlkYjEwNmZhNzY4MWQzNDk2MiIsInN1YiI6IjY1YjA1ZDVlNzlhMWMzMDBlOTdkYmI0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.BktiXW_iEfxWHOCZuZbeujCk1beGAQG14-mzf9Ses84',
+            },
+            success: function (data) {
+               console.log(data)
+               let imgURL = `https://image.tmdb.org/t/p/w500${data.poster_path}`
+
+               $('body').append(`<img src="${imgURL}" alt"포스터" />
+               <h2>${data.title}</h2>
+               <p/>${data.overview}
+               <p/>평점: ${data.vote_average.toFixed(2)}
+               <p/>장르: ${data.genres[0].name}`)
+            },
+            error: function (request, status, error) {
+               console.log('code:' + request.status)
+               console.log('message:' + request.responseText)
+               console.log('error:' + error)
+            },
+         })
+      </script>
+   </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //foreach 함수(콜백 함수 중 하나)
+        //배열.foreach(function(){}) -> es5 버전
+        //배열.foreach(() => {}) -> es6 버전
+
+        const array1 = ['a','b','c']
+
+        //es5버전의 foreach
+
+       for(let i = 0 ; i < array1.length; i++) {
+            console.log(array1[i])
+        } 
+
+        console.log(`====================`)
+
+        array1.forEach(function(element,index,array) {
+            console.log(`element: ${element}, index : ${index}, array : ${array}`)
+        })
+
+        console.log(`===========================`)
+        //es6버전의 foreach
+
+        array1.forEach((element,index,array)=>{
+            console.log(`element: ${element}, index : ${index}, array: ${array}`)
+        })
+        
+    </script>
+</body>
+</html>

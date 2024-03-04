@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <button class="btn">버튼</button>
+      <script>
+         // 콜백함수1 - 이벤트함수
+         //클릭 후 (이벤트가 발생 후) 코드가 실행이 된다 -> 순차적으로 처리 ->왜냐면 이벤트는 사용자가 이벤트를 발생시킨 다음에 처리를 해야하므로
+         //이벤트 함수는 콜백함수를 사용해서 동기화로 만들어야 한다.
+         const button = document.querySelector('.btn')
+
+         button.addEventListener('click', (e) => {
+            alert('이벤트발생')
+         })
+
+         //콜백함수 구현
+
+         function addEventListener2(x, callback) {
+            if (x === 'click') {
+               console.log('클릭이벤트 발생')
+            } else if (x == 'change') {
+               console.log('체인지이벤트 발생')
+            } else {
+               console.log('다른 이벤트 발생')
+            }
+
+            callback()
+         }
+
+         //  addEventListener2('click', () => {
+         //     console.log('A 개발자가 작성한 이벤트 코드')
+         //  })
+         //콜백지옥
+         addEventListener2('click', () => {
+            console.log('1')
+            addEventListener2('click', () => {
+               console.log('2')
+               addEventListener2('click', () => {
+                  console.log('3')
+               })
+            })
+         })
+      </script>
+   </body>
+</html>

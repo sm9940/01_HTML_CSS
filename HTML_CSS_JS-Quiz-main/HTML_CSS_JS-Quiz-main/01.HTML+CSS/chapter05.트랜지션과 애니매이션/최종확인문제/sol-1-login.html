@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-size: 0.9em;
+         }
+
+         ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+
+         a {
+            color: black;
+            text-decoration: none;
+         }
+
+         .wrap {
+            overflow: hidden;
+            min-width: 1200px;
+         }
+
+         /* 헤더 */
+
+         header {
+            height: 75px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(193, 193, 193);
+         }
+
+         nav {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+         }
+
+         .nav__menu {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 550px;
+         }
+
+         .nav__menu > li {
+            padding: 0 10px;
+         }
+
+         /* 메인 */
+
+         main {
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+         }
+
+         .main-section {
+            margin: 30px 0;
+         }
+
+         /* 푸터 */
+
+         footer {
+            height: 100px;
+            line-height: 100px;
+            background-color: aliceblue;
+         }
+
+         footer > p {
+            text-align: center;
+         }
+
+         /* 로그인 창 */
+
+         form {
+            width: 300px;
+            margin: 0 auto;
+            background-color: rgb(239, 239, 239);
+            padding: 30px 10px;
+            border-radius: 10px;
+         }
+
+         form > .login-icon {
+            display: block;
+            margin: 15px auto;
+         }
+
+         form #r-name,
+         #r-phone {
+            width: 100%;
+            height: 35px;
+            box-sizing: border-box;
+         }
+
+         form input[type='submit'] {
+            width: 100%;
+            margin: 10px 0;
+            height: 35px;
+            background-color: rgb(28, 95, 219);
+            color: white;
+            border: 1px solid rgb(28, 95, 219);
+            border-radius: 5px;
+         }
+
+         form .join-link {
+            font-size: 0.8rem;
+            color: rgb(28, 95, 219);
+            font-weight: bold;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="wrap">
+         <header>
+            <nav class="nav">
+               <a href="https://www.expedia.co.kr/" target="_blank">
+                  <img src="./images/logo.svg" width="126" />
+               </a>
+               <ul class="nav__menu">
+                  <li>한국어</li>
+                  <li>숙박 시설 등록하기</li>
+                  <li>지원</li>
+                  <li>내 여행</li>
+                  <li>아이콘</li>
+                  <li><a href="./sol-1-login.html">로그인</a></li>
+               </ul>
+            </nav>
+         </header>
+         <main class="main">
+            <section class="main-section">
+               <form>
+                  <img
+                     src="./images/login.png"
+                     width="70"
+                     alt="로그인 아이콘"
+                     class="login-icon"
+                  />
+                  <ul>
+                     <li>
+                        <label for="r-name"></label>
+                        <input type="text" id="r-name" placeholder="이름" />
+                     </li>
+                     <li>
+                        <label for="r-phone"></label>
+                        <input
+                           type="password"
+                           maxlength="15"
+                           id="r-phone"
+                           placeholder="비밀번호"
+                        />
+                     </li>
+                     <li>
+                        <input type="submit" value="로그인" />
+                     </li>
+                     <li>
+                        <a href="./sol-1-regist.html" class="join-link"
+                           >회원가입하기</a
+                        >
+                     </li>
+                  </ul>
+               </form>
+            </section>
+         </main>
+         <footer>
+            <p>
+               © 2023 Expedia, Inc., Expedia Group 계열사. All rights reserved.
+            </p>
+         </footer>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div id="wrap">
+         <p><button class="btn_1">버튼1</button></p>
+         <p class="btn_test"><button class="btn_2">버튼2</button></p>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         $('.btn_1.on').on('mouseover focus', function () {
+            alert('Hello!')
+         })
+         //append, prepend, addClass 등등 뭔가를 자바스크립트나  제이쿼리로 추가하는 것을 동적생성이라고 한다.
+         $('.btn_1').addClass('on') //작동되지않음
+
+         /*
+            첫번째 해결책: 동적생성을 이벤트 직전에 한다
+            두번째 해결책: 라이브 이벤트 사용
+         */
+
+         //라이브 이벤트 사용
+         //$([document | 이벤트 대상의 상위 요소]).on(이벤트 종류, 이벤트 대상,function(){})
+         $('.btn_test').on('mouseover focus', '.btn_2.on', function () {
+            alert('Welcome!')
+         })
+
+         $('.btn_2').addClass('on')
+      </script>
+   </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>상품선택</legend>
+        <p><b>주문할 상품을 선택해주세요.</b></p>
+
+        <!-- 스핀박스로 입력(type=number) -->
+        <ul>
+          <li>
+            <label><input type="checkbox" value="s_3" />선물용 3kg</label>
+            <input type="number" min="0" max="5" /> 개(최대 5개)
+          </li>
+          <li>
+            <label><input type="checkbox" value="s_5" />선물용 5kg</label>
+            <input type="number" min="0" max="3" value="1" /> 개(최대3개)
+          </li>
+        </ul>
+        <!-- 슬라이드 막대로 입력(type=range) -->
+        <ul>
+          <li>
+            <label><input type="checkbox" value="f_3" />가정용 3kg</label>
+            <input type="range" min="0" max="5" /> 개(최대 5개)
+          </li>
+          <li>
+            <label><input type="checkbox" value="f_5" />가정용 5kg</label>
+            <input type="range" min="0" max="3" value="1" /> 개(최대 3개)
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div id="wrap">
+         <button class="btn_1">추첨</button>
+         <p></p>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+      <script>
+         $('#wrap').on('click', '.btn_1.on', function () {
+            $('p').text('당첨되셨습니다')
+         })
+         //addClass같은 동적 생성을 이벤트 앞에 작성하던가 라이브 이벤트 등록방식을 사용해야 된다
+         //일반적인 이벤트 등록 방식은 동적으로 생성되거나 복제된 요소에 적용되지 않으므로 라이브 이벤트 등록방식으로 작성한다.
+         $('.btn_1').addClass('on')
+      </script>
+   </body>
+</html>

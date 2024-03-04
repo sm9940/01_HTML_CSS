@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+ <style>
+        /* body 안에 있는 모든 태그 선택 */
+        body * {
+            border: 1px solid blue;
+        }
+        .accent {
+            color: red ;
+            font-weight: bold;
+            margin: 30px;
+            width: 40px;
+            height: 50px;
+            display: inline-block;
+        }
+        .block-tag{
+            margin: 30px;
+            width: 180px;
+            height: 200px;
+        }
+    </style>
+
+<body>
+    <h1 class="block-tag">시간이란..</h1>
+    <!-- img, a , strong 태그는 인라인 태그 -->
+    <div>내일 죽을 것처럼 <span class="accent">오늘</span>을 살고</div>
+    <p>영원히 살 것처럼 <br>
+       내일을 꿈꾸어라.</p>   
+</body>
+</html>

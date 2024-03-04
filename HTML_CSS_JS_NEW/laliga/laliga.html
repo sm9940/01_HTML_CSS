@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         const settings = {
+            async: true,
+            crossDomain: true,
+            url: 'https://api.themoviedb.org/3/movie/latest',
+            method: 'GET',
+            headers: {
+               accept: 'application/json',
+               Authorization:
+                  'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwNzI1NWNmYWQ0ZDhjOGEzZWRkMzZkYzg1YTkyM2RhYiIsInN1YiI6IjY1YjA1Y2ExMzk3NTYxMDBjYjIzMGVlMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.k4oJDDNasCBOiEjMc-1LTDrY6HDXVvRzw15XHqLE8xg',
+            },
+         }
+
+         $.ajax(settings).done(function (response) {
+            console.log(response)
+         })
+      </script>
+   </body>
+</html>

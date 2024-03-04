@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="images"></div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         let movieURL =
+            'https://api.themoviedb.org/3/movie/popular?language=ko-KR&page=1&region=KR'
+         $.ajax({
+            type: 'GET',
+            crossDomain: true,
+            url: movieURL,
+            dataType: 'json',
+            headers: {
+               accept: 'application/json',
+               Authorization:
+                  'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwNzI1NWNmYWQ0ZDhjOGEzZWRkMzZkYzg1YTkyM2RhYiIsInN1YiI6IjY1YjA1Y2ExMzk3NTYxMDBjYjIzMGVlMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.k4oJDDNasCBOiEjMc-1LTDrY6HDXVvRzw15XHqLE8xg', //서버의 정보를 알려준다
+            },
+            success: function (data) {
+               const results = data.results
+               console.log(results)
+
+               for (const result of results) {
+                  //   console.log('영화제목:', result.title)
+                  //   console.log('영화 상세설명:', result.overview)
+
+                  //   console.log('평점:', result.vote_average)
+                  //   console.log('포스터:', result.poster_path)
+
+                  let imgURL = `https://image.tmdb.org/t/p/w500${result.poster_path}`
+                  $('.images')
+                     .append(`<a href="./getDetailMovie.html?id=${result.id}">
+                    <img src="${imgURL}"alt="영화포스터" width="250"/>
+                    </a><br/>
+                    <h2>${result.title}</h2>
+                    <br/>`)
+               }
+            },
+            error: function (request, status, error) {
+               console.log('code:' + request.status)
+               console.log('message:' + request.responseText)
+               console.log('error:' + error)
+            },
+         })
+      </script>
+   </body>
+</html>

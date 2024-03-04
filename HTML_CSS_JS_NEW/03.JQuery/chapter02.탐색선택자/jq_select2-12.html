@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <div id="wrap">
+      <p>내용1</p>
+      <p style="display: none">내용2</p>
+      <p>내용3</p>
+   </div>
+   <form action="#">
+      <p id="zone1">
+         <select name="course" id="course">
+            <option value="opt1">옵션1</option>
+            <option value="opt2" selected>옵션2</option>
+            <option value="opt3">옵션3</option>
+         </select>
+      </p>
+      <p id="zone2">
+         <input type="checkbox" name="hobby1" value="독서" /> 독서
+         <input type="checkbox" name="hobby2" value="자전거" /> 자전거
+         <input type="checkbox" name="hobby3" value="등산" checked /> 등산
+      </p>
+      <p id="zone3">
+         <input type="radio" name="gender" value="male" /> 남성
+         <input type="radio" name="gender" value="female" checked /> 여성
+      </p>
+   </form>
+   <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         //$(" :hidden"): 요소 중 숨겨져 있는 요소만 선택, :visible: 요소 중 보이는 요소만 선택
+         $('#wrap p:visible').css({
+            display: 'block',
+            background: 'skyblue',
+         })
+
+         //$(“:selected”) : selected 속성이 적용된 요소만 선택. val() => 태그의 value='값'에서 값에 해당하는 부분을 가지고온다.
+         var z1 = $('#zone1 :selected').val() //selected된 요소의.val() value="opt2"값을가져온다
+         console.log(z1)
+
+         var z2 = $('#zone2 : checked').val() //checked 된 요소.
+         console.log(z2) // value인 '등산'을 가져옴
+
+         var z3 = $('#zone3 : checked').val()
+         console.log(z3) // 속성value값들이 실제로 서버에 넘겨주는값.
+      </script>
+   </body>
+</html>

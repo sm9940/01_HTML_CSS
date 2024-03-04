@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1>탐색 선택자</h1>
+      <ul id="menu1">
+         <li>내용1-1</li>
+         <li>내용1-2</li>
+         <li>내용1-3</li>
+      </ul>
+      <ul id="menu2">
+         <li>내용2-1</li>
+         <li>내용2-2</li>
+         <li>내용2-3</li>
+      </ul>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         // 1. 데이터를 사용해서 each 사용
+         var obj = [{ area: '서울' }, { area: '부산' }, { area: '전주' }]
+
+         $(obj).each(function (index, value) {
+            //foreach와 비슷하게 반복해서 (인덱스, 값) 을 출력
+            console.log(`${index} : ${JSON.stringify(value)}`) //값의경우 벡틱에서 문자열로 출력하기때문에 객체를 문자열로 바꾼다..
+         })
+
+         //2. DOM(태그요소) 들을 다루는 방법 -> jQeury는 이 용도로 더 많이 쓰임. (사견Select해서 가져오는느낌인가?)
+         $('#menu2 li').each(function (index, value) {
+            console.log(index, value)
+         })
+
+         //each의 다른문법 위와 아래 둘중 편한방법으로 쓰면됨.
+         $.each($('#menu2 li'), function (index, value) {
+            console.log(index, value) // console.log(index, $(this)) -> $(this) 출력해보면 모양은 다르지만 똑같음.
+         })
+      </script>
+   </body>
+</html>

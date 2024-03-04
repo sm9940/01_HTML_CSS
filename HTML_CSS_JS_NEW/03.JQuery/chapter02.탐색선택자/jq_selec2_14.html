@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div id="outer_wrap">
+         <h1>콘텐츠 탐색 선택자</h1>
+         <section id="inner_1">
+            <h2>find( ), filter( )</h2>
+            <p class="txt1">내용1</p>
+            <p class="txt2">내용2</p>
+         </section>
+
+         <section id="inner_2">
+            <h2>filter(function)</h2>
+            <p>index 0</p>
+            <p>index 1</p>
+            <p>index 2</p>
+            <p>index 3</p>
+         </section>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         //.find(요소) => 하위태그 중에서 특정요소를 가진 요소 선택
+         $('#inner_1').find('.txt1').css('background-color', 'red')
+
+         //.filter(요소) => .finde(요소) 처럼 하위태그 중에서 선택이아닌, 선택한 요소중 특정 요소를 선택.
+         $('#inner_1 p').filter('.txt2').css('background-color', 'blue')
+
+         $('#inner_2 p')
+            .filter(function (index, obj) {
+               console.log(index, obj)
+               return index % 2 === 0 // 짝수번쨰 인덱스
+            })
+            .css('background-color', 'yellow')
+      </script>
+   </body>
+</html>

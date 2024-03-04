@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+* li{
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+main {
+    width: 1000px;
+    height: 2400px;
+    min-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.header{
+    position: relative;
+}
+
+.header__search{
+    height: 150px;
+}
+
+.header__menu{
+    height: 50px;
+}
+.left{
+    display: block;
+    float: left;
+    width: 650px;
+    height: 1800px;
+}
+.left__banner {
+    height: 150px;
+}
+.left__news {
+    height: 550px;
+}
+.left__tv {
+    height: 200px;
+}
+.tv__name {
+    height: 50px;
+}
+.list__1 {
+    height: 150px;
+    display: block;
+}
+.list__1__5min{
+    float: left;
+    width: 25%;
+    height: 150px;
+}
+.list__1__flow{
+    float: left;
+    width: 25%;
+    height: 150px;
+}
+.list__1__homes{
+    float: left;
+    width: 25%;
+    height: 150px;
+}
+.list__1__hong{
+    float: left;
+    width: 25%;
+    height: 150px;
+}
+.cafe__name {
+    height: 50px;
+}
+.list__1 {
+    height: 150px;
+    display: block;
+}
+.list__2__5min{
+    float: left;
+    width: 25%;
+    height: 200px;
+}
+.list__2__flow{
+    float: left;
+    width: 25%;
+    height: 200px;
+}
+.list__2__homes{
+    float: left;
+    width: 25%;
+    height: 200px;
+}
+.list__2__hong{
+    float: left;
+    width: 25%;
+    height: 200px;
+}
+.left__cafe {
+    height: 250px;
+}
+.left__home {
+    height: 650px;
+}
+.side{
+    display: block;
+    float: right;
+    width: 350px;
+    height: 1800px;
+}
+
+.side__login{
+    height: 150px;
+}
+.side__banner{
+    height: 200px;
+}
+.side__shopping {
+    height: 750px;
+}
+.side__event {
+    height: 450px;
+}
+.side__ad {
+    height: 250px;
+}
+.bottom{
+    display: block;
+    clear: both;
+    width: 1000px;
+    height: 600px;
+}
+.footer {
+    height: 500px;
+}

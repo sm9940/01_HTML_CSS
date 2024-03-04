@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var num1 = Number(prompt('첫번째 숫자 입력하시오', ''))
+         var num2 = Number(prompt('두번째 숫자 입력하시오', ''))
+         var num3 = Number(prompt('세번째 숫자 입력하시오', ''))
+         var sum = num1 + num2 + num3
+         var avg = sum / 3
+
+         var max = num1
+         var min = num1
+
+         if (max < num2) max = num2
+         if (max < num3) max = num3
+
+         if (min > num2) min = num2
+         if (min > num3) min = num3
+
+         document.write(`합계:${sum},평균:${avg}, 최댓값: ${max}, 최솟값 : ${min} `)
+
+         //   if(a>b && a>c) {
+         //       document.write(`${a} <br>`)
+         //    } else if (b>a && b>c) {
+         //       document.write(`${b} <br>`)
+         //    } else {
+         //       document.write(`${c} <br>`)
+         //    }
+
+         //    if(a<b && a<c) {
+         //       document.write(`${a} <br>`)
+         //    } else if (b<a && b<c) {
+         //       document.write(`${b} <br>`)
+         //    } else {
+         //       document.write(`${c} <br>`)
+         //    }
+
+         //    if(a+b+c) {
+         //       document.write(`${a+b+c} <br>`)
+         //    }
+
+         //    if(a+b+c/3) {
+         //       document.write(`${(a+b+c/3)}`)
+         //    }
+      </script>
+   </body>
+</html>

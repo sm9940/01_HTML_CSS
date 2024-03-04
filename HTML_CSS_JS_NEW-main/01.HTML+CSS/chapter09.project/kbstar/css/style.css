@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em !important;
+}
+
+ul {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+a {
+    color: black !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.wrap {
+    overflow: hidden;
+    min-width: 1200px;
+}
+
+/* 헤더 */
+header {
+    position: relative;
+    height: 95px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 auto;
+    z-index: 999;   
+   
+}
+
+.nav__logo a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 108px;
+    margin-right:100px ;
+}
+.nav__menu {
+    width: 700px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.nav__menu >  li {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    padding: 0px 8px;
+}
+.nav__menu > li a{
+   line-height: 14px;
+   height: 14px;
+}
+.w1 {
+    display: block;
+    font-size: 12px;
+}
+.sub-menu {
+    display: none;
+    width: 200px;
+    margin-top: 300px;
+    background: white;
+    position: absolute;
+    top: 30px;
+    border-top: 1px solid rgb(255, 238, 0);
+}
+
+.nav__menu li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu > li {
+    padding: 10px;
+}
+.sub-menu li:hover {
+    background-color: rgba(177, 220, 248, 0.384);
+}
+
+.bottom-menu {
+    display: flex;
+    width: 1000px;
+    height: 30px;
+    padding: 0px 30px;
+}
+.bottom__login {
+    width: 1000px;
+    height: 30px;
+    display: flex;
+    
+}
+.bottom__login button {
+    display: flex;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #eee;
+}
+/* 메인 */
+.main-section {
+    background-color: #f2fdec;
+}
+.main__banner1 { 
+    height: 445px;
+    width:1000px;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__inform {}
+.banner1__content {
+    width: 1000px;
+
+}
+/* 푸터 */

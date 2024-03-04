@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <input type="checkbox" />
+      <span>타이머 활성화</span>
+      <h1></h1>
+
+      <script>
+         let timer = 0 // 초 단위
+         let timerId = 0 //setInterval() 함수를 담는 변수
+
+         const h1 = document.querySelector('h1')
+         const checkbox = document.querySelector('input')
+         //체크박스의 상태가 바뀔때 이벤트
+         checkbox.addEventListener('change', (event) => {
+            //체크가 된 상태 : true, 체크 해제 상태: false
+            if (event.currentTarget.checked) {
+               //체크가 된 상태면 타이머를 만든다
+               timerId = setInterval(() => {
+                  //h1 태그에 초단위 글자를 넣어준다
+                  timer += 1
+                  h1.textContent = `${timer}초`
+               }, 1000)
+            } else {
+               clearInterval(timerId)
+            }
+         })
+      </script>
+   </body>
+</html>

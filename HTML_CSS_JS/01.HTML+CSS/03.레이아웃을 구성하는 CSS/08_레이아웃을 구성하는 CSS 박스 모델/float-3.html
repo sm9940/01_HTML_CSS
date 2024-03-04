@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 20px;
+            margin: 10px;
+        }
+
+        #box1 {
+            background-color: yellow;
+            float:left ;
+        }
+        #box2 {
+            background-color: skyblue;
+            float: left;
+        }
+        #box3 {
+            background-color: burlywood;
+            /* float 해제 */
+            /* both : 양쪽 float의 영향을 받지 않는다 */
+            clear: left;
+        }
+        #box4 {
+            background-color: blueviolet;
+            clear: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">박스1</div>
+    <div id="box2">박스2</div>
+    <div id="box3">박스3</div>
+    <div id="box4">박스4</div>
+</body>
+</html>

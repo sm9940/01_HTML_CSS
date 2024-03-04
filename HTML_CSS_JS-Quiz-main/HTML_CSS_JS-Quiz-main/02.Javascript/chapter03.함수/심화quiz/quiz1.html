@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         /* 
+            [계산기 만들기]
+            숫자 두개를 입력받아
+            덧셈, 뺄셈, 곱셈, 나눗셈 기능을 
+            수행하는 함수 4개를 만들고 
+            각각의 결과값을 출력하시오. 
+        */
+        var num1 = Number(prompt('숫자 입력', 0))
+         var num2 = Number(prompt('숫자 입력', 0))
+
+         function add(num1,num2){
+            const a = num1 + num2
+            return a
+         }
+         document.write(`합계:${add(num1,num2)}<br>`)
+
+         function sub(num1,num2){
+            const s = num1 - num2
+            return s
+         }
+         document.write(`차:${sub(num1,num2)}<br>`)
+
+         function div(num1,num2){
+            const d = num1 / num2
+            return d
+         }
+         document.write(`나눈 값:${div(num1,num2)}<br>`)
+
+         function multi(num1,num2){
+            const m = num1 * num2
+            return m
+         }
+         document.write(`곱:${sub(num1,num2)}<br>`)
+         
+      </script>
+   </body>
+</html>

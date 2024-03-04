@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1>제이쿼리</h1>
+      <h2>선택자</h2>
+      <h3 class="title">직접 선택자</h3>
+
+      <div id="wrap">
+         <h1>인접관계 선택자</h1>
+      </div>
+      <script src="./jquery-3.7.1.min.js"></script>
+      <script>
+         //여러개의 css를 적용하는 첫번째 방법
+         //h3 태그면서 class='title'인 태그를 선택(~면서)
+         $('h1').css('background-color', 'blue')
+         $('h3.title')
+            .css('border', '1px solid red')
+            .css('color', 'red')
+            .css('background-color', 'yellow')
+
+         //여러개의 css를 적용하는 두번째 방법
+         const property = {
+            'background-color': 'gray',
+            border: '2px dashed blue',
+            margin: '30px',
+            padding: '20px',
+         }
+         $('#wrap h1').css(property)
+      </script>
+   </body>
+</html>

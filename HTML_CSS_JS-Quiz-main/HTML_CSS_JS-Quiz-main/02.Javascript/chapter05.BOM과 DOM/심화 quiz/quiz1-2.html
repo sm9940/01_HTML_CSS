@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <input type="text" id="op1" />
+      <select name="oper" id="oper">
+         <option value="option" selected>선택</option>
+         <option value="plus">+</option>
+         <option value="minus">-</option>
+      </select>
+      <input type="text" id="op2" />
+
+      =
+
+      <span id="answer"></span>
+
+      <!-- 자바스크립트 -->
+      <script>
+         let current = 0
+         const op1 = document.querySelector('#op1')
+         const op2 = document.querySelector('#op2')
+         const selectBox = document.querySelector('#oper')
+         const answer = document.querySelector('#answer')
+
+         selectBox.addEventListener('change', (event) => {
+            let result = 0 //
+            //    const value = event.currentTarget.options
+            //    const option = value[value.selectedIndex]
+            //    if (option.value === 'plus') {
+            //       result = Number(op1.value) + Number(op2.value)
+            //       answer.textContent = `${result}`
+            //    } else if (option.value === 'minus') {
+            //       result = Number(op1.value) - Number(op2.value)
+            //       answer.textContent = `${result}`
+            //    }
+            // })
+            var value = selectBox.options[selectBox.selectedIndex].value
+
+            switch (value) {
+               case 'plus':
+                  result = Number(op1.value) + Number(op2.value)
+
+                  break
+
+               case 'minus':
+                  result = Number(op1.value) - Number(op2.value)
+                  break
+            }
+
+            answer.textContent = result
+         })
+      </script>
+   </body>
+</html>

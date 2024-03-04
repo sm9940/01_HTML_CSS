@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Number 객체 함수들 
+        
+        const m = Number('abc')
+        console.log(m)
+        console.log(Number.isNaN(m)) //숫자가 아니니?
+        if(Number.isNaN(m)) {
+            console.log('숫자가 아닙니다')
+        } else{
+            console.log('숫자 입니다')
+        }
+
+        const n = 10 / 0
+
+        console.log(n)
+        console.log(Number.isFinite(n)) //유한한 숫자니?
+
+        if(Number.isFinite(n)) {
+            console.log('무한대 아님')
+        } else {
+            console.log('무한대')
+        }
+    </script>
+</body>
+</html>

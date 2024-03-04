@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function fetchItems() {
+            let promise = new Promise(function (resolve, reject) {
+               setTimeout(() => {
+                  var items = [1, 2, 3]
+                  resolve(items)
+               }, 3000)
+            })
+            return promise
+         }
+
+         //async : 비동기, await를 사용 시 function 앞에 반드시 붙여줘야 한다.
+         async function logItems() {
+            var resultItems = await fetchItems()
+            console.log(resultItems)
+         }
+         logItems()
+
+         //await(기다리다):then을 대신한다. 특정 함수가 실행될때까지 기다린 후 실행한다.
+      </script>
+   </body>
+</html>

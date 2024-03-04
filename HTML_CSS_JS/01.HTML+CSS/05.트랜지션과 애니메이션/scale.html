@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+             body {
+            background: url(./images/xyz.png) center center no-repeat;
+        }
+
+        #container {
+            width: 800px;
+            height: 200px;
+            margin: 20px auto;
+        }
+
+        .origin {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            margin: 40px;
+        }
+        .origin > div {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        #scalex:hover{
+            /* x축으로 2배 확대 */
+            transform: scaleX(2);
+        }
+        #scaley:hover{
+            /* y축으로 2배 확대 */
+            transform: scaleY(2);
+        }
+        #scalexy:hover{
+            /* x,y축으로 0.7배 확대 */
+            transform: scale(0.7);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="origin">
+            <div id="scalex"></div>
+        </div>
+        <div class="origin">
+            <div id="scaley"></div>
+        </div>
+        <div class="origin">
+            <div id="scalexy"></div>
+        </div>
+    </div>
+</body>
+</html>

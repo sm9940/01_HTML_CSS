@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <img class="rect" alt="고양이1" />
+      <img class="rect" alt="고양이2" />
+      <img class="rect" alt="고양이3" />
+      <img class="rect" alt="고양이4" />
+      <script>
+         const rects = document.querySelectorAll('.rect')
+
+         rects.forEach((rect, index) => {
+            /*
+                특정 속성에 값을 지정
+                문서객체.setAttribute('태그의 속성명', 속성값)
+           */
+            // 100,200,300,400
+            const width = (index + 1) * 100
+            const height = (index + 1) * 100
+            const src = `https://placekitten.com/${width}/${height}`
+            rect.setAttribute('src', src)
+            /*
+                특정 속성의 값을 가져온다
+                문자객체.getAttribute('태그의 속성명')
+            */
+            console.log(rect.getAttribute('alt'))
+         })
+      </script>
+   </body>
+</html>

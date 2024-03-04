@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-size: 0.9em;
+         }
+
+         ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+
+         a {
+            color: black;
+            text-decoration: none;
+         }
+
+         .wrap {
+            overflow: hidden;
+            min-width: 1200px;
+         }
+
+         /* 헤더 */
+
+         header {
+            height: 75px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(193, 193, 193);
+            margin: 30px;
+         }
+
+         nav {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+         }
+
+         .nav__menu {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 550px;
+         }
+
+         .nav__menu > li {
+            padding: 0 10px;
+         }
+
+         /* 메인 */
+         ul img {
+            width: 80px;
+            margin-bottom: 15px;
+         }
+         .main {
+            width: 320px;
+            
+            margin: 0 auto;
+            border-radius: 15px;
+            background-color: rgb(230, 230, 230);
+            overflow: hidden;
+              text-align: center;
+            
+         }
+
+         .main-section {
+            margin: 30px 0;
+         }
+         input[type="text"]{
+            width: 300px;
+            height: 30px;
+            margin: px auto;
+            box-sizing: border-box;
+         }
+         input[type="password"]{
+            width: 300px;
+            height: 30px;
+            margin: 0px auto;
+            box-sizing: border-box;
+         }
+         input[type="submit"]{
+            width: 300px;
+            height: 30px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            background-color: #0084ff;
+            margin: 5px auto;
+            color:white;
+            box-sizing: border-box;
+         }
+
+         .main-section ul li a{
+            float: left ;
+            margin: 5px ;
+            margin-bottom: 50px;
+            padding-left:5px ;
+            color: #0084ff;
+            font-weight: bold;
+         }
+
+         /* 푸터 */
+
+         footer {
+            height: 600px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="wrap">
+         <header>
+            <nav class="nav">
+               <a href="https://www.expedia.co.kr/" target="_blank">
+                  <img src="./images/logo.svg" width="126" />
+               </a>
+               <ul class="nav__menu">
+                  <li>한국어</li>
+                  <li>숙박 시설 등록하기</li>
+                  <li>지원</li>
+                  <li>내 여행</li>
+                  <li>아이콘</li>
+                  <li><a href="./quiz-1-login.html">로그인</a></li>
+               </ul>
+            </nav>
+         </header>
+         <main class="main">
+            <section class="main-section">
+               <form>
+                  <ul>
+                     <img src="./images/login.png" alt="로그인">
+                     <li>
+                        
+                        <input type="text" id="r-name" placeholder="이름" />
+                        
+                     </li>
+                     <li>
+                        
+                        <input type="password" maxlength="15" id="r-phone" placeholder="비밀번호" />
+                     </li>
+                     <li>
+                        <input type="submit" value="로그인" />
+                     </li>
+                     <li>
+                        <a href="./quiz-1-regist.html">회원가입하기</a>
+                     </li>
+                  </ul>
+               </form>
+            </section>
+         </main>
+         <footer></footer>
+      </div>
+   </body>
+</html>

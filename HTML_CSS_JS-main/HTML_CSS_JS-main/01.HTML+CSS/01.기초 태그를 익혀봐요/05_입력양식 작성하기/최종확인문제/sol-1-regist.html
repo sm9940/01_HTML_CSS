@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-size: 0.9em;
+         }
+
+         ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+
+         a {
+            color: black;
+            text-decoration: none;
+         }
+
+         .wrap {
+            overflow: hidden;
+            min-width: 1200px;
+         }
+
+         /* 헤더 */
+
+         header {
+            height: 75px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(193, 193, 193);
+         }
+
+         nav {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+         }
+
+         .nav__menu {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 550px;
+         }
+
+         .nav__menu > li {
+            padding: 0 10px;
+         }
+
+         /* 메인 */
+
+         main {
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+         }
+
+         .main-section {
+            margin: 30px 0;
+         }
+
+         /* 푸터 */
+
+         footer {
+            height: 600px;
+         }
+
+         /* 회원가입 폼 */
+         #container {
+            width: 520px;
+            border: 1px solid black;
+            padding: 20px 40px;
+            margin: 0 auto;
+         }
+         fieldset {
+            margin-bottom: 15px;
+         }
+         legend {
+            font-weight: bold;
+         }
+         ul {
+            list-style-type: none;
+         }
+         li {
+            line-height: 30px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="wrap">
+         <header>
+            <nav class="nav">
+               <a href="https://www.expedia.co.kr/" target="_blank">
+                  <img src="./images/logo.svg" width="126" />
+               </a>
+               <ul class="nav__menu">
+                  <li>한국어</li>
+                  <li>숙박 시설 등록하기</li>
+                  <li>지원</li>
+                  <li>내 여행</li>
+                  <li>아이콘</li>
+                  <li><a href="./sol-1-login.html">로그인</a></li>
+               </ul>
+            </nav>
+         </header>
+         <main class="main">
+            <section class="main-section">
+               <div id="container">
+                  <h1>익스피디아 가입</h1>
+                  <p>아래를 작성해주세요.</p>
+                  <hr />
+                  <form>
+                     <h4>개인정보</h4>
+                     <ul>
+                        <li>
+                           <!-- <input>태그 앞 뒤에 <label>과 </label> 태그로 묶어도 됩니다 -->
+                           <label for="sname"> 이름 </label>
+                           <input
+                              type="text"
+                              id="sname"
+                              autofocus
+                              placeholder="공백없이 입력하세요"
+                           />
+                        </li>
+                        <li>
+                           <label for="pwd"> 비밀번호 </label>
+                           <input type="password" maxlength="15" id="pwd" />
+                        </li>
+                        <li>
+                           <label for="email"> 이메일 </label>
+                           <input type="email" id="email" />
+                           @
+                           <select>
+                              <option value="gmail">gmail.com</option>
+                              <option value="naver">naver.com</option>
+                           </select>
+                        </li>
+                     </ul>
+                     <h4>관심 여행지</h4>
+                     <ul>
+                        <li>
+                           <label
+                              ><input type="checkbox" name="field" value="jp" />
+                              일본</label
+                           >
+                        </li>
+                        <li>
+                           <label
+                              ><input type="checkbox" name="field" value="am" />
+                              미국</label
+                           >
+                        </li>
+                        <li>
+                           <label
+                              ><input type="checkbox" name="field" value="eu" />
+                              유럽</label
+                           >
+                        </li>
+                     </ul>
+                     <div>
+                        <input type="submit" value="가입하기" />
+                        <input type="reset" value="다시 쓰기" />
+                     </div>
+                  </form>
+               </div>
+            </section>
+         </main>
+         <footer></footer>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div id="a"></div>
+      <div id="b"></div>
+
+      <script>
+         const a = document.querySelector('#a')
+         const b = document.querySelector('#b')
+         /*
+            1.태그 사이에 글자 넣기
+            문서객체.textContent = '글자'
+        */
+         a.textContent = 'textContent 속성'
+
+         /*
+            2. 태그 사이에 태그 넣기
+            문서객체. innerHTML = '태그'
+         */
+
+         b.innerHTML = '<h1>innerHTML 속성 </h1>'
+      </script>
+   </body>
+</html>

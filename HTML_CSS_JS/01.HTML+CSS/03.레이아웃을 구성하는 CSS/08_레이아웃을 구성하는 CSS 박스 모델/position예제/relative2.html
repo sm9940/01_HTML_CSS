@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            background-color: royalblue;
+        }
+        /* relative는 부모태그 상관없이 뷰포트를 기준으로 이동한다 */
+        .child {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background-color: salmon;
+            top: 100px;
+            left:300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

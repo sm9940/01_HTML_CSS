@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-size: 0.9em;
+         }
+
+         ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+
+         a {
+            color: black;
+            text-decoration: none;
+         }
+
+         .wrap {
+            overflow: hidden;
+            min-width: 1200px;
+         }
+
+         /* 헤더 */
+
+         header {
+            height: 75px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(193, 193, 193);
+         }
+
+         nav {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+         }
+
+         .nav__menu {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 550px;
+         }
+
+         .nav__menu > li {
+            padding: 0 10px;
+         }
+
+         /* 메인 */
+
+         main {
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+         }
+
+         .main-section {
+            margin: 30px 0;
+         }
+
+         /* 푸터 */
+
+         footer {
+            height: 100px;
+         }
+
+         /* 게시판 */
+
+         .board_list {
+            width: 100%;
+            border-top: 1px solid #444444;
+            border-collapse: collapse;
+            font-size: 1rem;
+         }
+         .board_list caption {
+            padding: 30px;
+         }
+         .board_list th,
+         .board_list td {
+            /* border-spacing: 0; */
+            border-bottom: 1px solid #444444;
+            padding: 10px;
+            text-align: center;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="wrap">
+         <header>
+            <nav class="nav">
+               <a href="https://www.expedia.co.kr/" target="_blank">
+                  <img src="./images/logo.svg" width="126" />
+               </a>
+               <ul class="nav__menu">
+                  <!-- 1번 문제: -->
+               </ul>
+            </nav>
+         </header>
+         <main class="main">
+            <section class="main-section">
+               <div>
+                  <!-- 2번 문제 -->
+               </div>
+               <div>
+                  <!-- 3번 문제 -->
+               </div>
+            </section>
+            <section class="main-section">
+               <!-- 4번 문제 -->
+            </section>
+            <section class="main-section">
+               <table class="board_list">
+                  <!-- 5번 문제  -->
+               </table>
+            </section>
+         </main>
+         <footer></footer>
+      </div>
+   </body>
+</html>

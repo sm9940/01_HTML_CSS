@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <input type="text" /> cm =
+
+      <!-- 출력 -->
+      <span></span>
+      <!-- 단위선택 -->
+      <select>
+         <option value="10">mm</option>
+         <option value="0.01">m</option>
+         <option value="0.393701">inch</option>
+      </select>
+
+      <script>
+         let current //현재값(사용자가 입력한 값)
+         let trans = 10 //변환상수(select 한 단위 값)
+
+         const input = document.querySelector('input')
+         const select = document.querySelector('select')
+         const span = document.querySelector('span')
+
+         //1. 단위 계산 함수
+         const calculate = () => {
+            span.textContent = (current * trans).toFixed(2)
+         }
+
+         //2. select 박스 선택시 이벤트
+         select.addEventListener('change', (event) => {
+            //선택한 option에서의 value값을 가져와서 trans 변수의 값을 바꾼다
+            const options = event.currentTarget.options
+            const index = event.currentTarget.options.selectedIndex
+            trans = Number(options[index].value)
+
+            //단위 계산 함수 호출
+            calculate()
+         })
+         //3. input창에서 키보드 입력시 이벤트
+         input.addEventListener('keyup', (event) => {
+            //현재값에 사용자가 입력한 단위를 넣어준다
+            current = event.currentTarget.value //이벤트 발생시 입력된 값을 가져온다
+
+            //단위 계산 함수 호출(input 창에 입력한 뒤)
+            calculate()
+         })
+      </script>
+   </body>
+</html>

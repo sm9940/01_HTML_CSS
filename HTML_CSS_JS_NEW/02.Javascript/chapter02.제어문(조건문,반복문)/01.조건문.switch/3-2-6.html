@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //학점 산출 프로그램 만들기
+
+        //값도 받고 + 타입도 변경
+        const score = Number(prompt('학점을 입력해주세요', 0))
+
+        if(score >= 90) {
+            document.write('학점은 A 입니다')
+        } else if (80<= score && score <90){
+            //80이상 이면서 90 미만
+            document.write('학점은 B 입니다')
+        } else if (70<=score && score <80) {
+            // 70이상 이면서 80 미만
+            document.write('학점은 C 입니다')
+        }  else if (60<=score && score <70) {
+            // 60이상 이면서 70 미만
+            document.write('학점은 D 입니다')
+        }   else {
+            // 60미만
+            document.write('학점은 F 입니다')
+        }
+
+
+            
+    </script>
+</body>
+</html>

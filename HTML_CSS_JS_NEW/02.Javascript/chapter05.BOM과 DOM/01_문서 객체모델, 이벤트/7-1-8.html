@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //1. 태그를 생성하기
+         const header = document.createElement('h1') // <h1></h1>
+
+         header.textContent = '문서 객체 동적생성' //<h1>문서 객체 동적생성</h1>
+         header.style.color = 'white'
+         header.style.backgroundColor = 'black'
+         //<h1 style = "color:white; background-color:black;"> 문서 객체 동적생성 </h1>
+
+         //2. 생성한 태그를 body 태그 아래에 추가
+         //부모객체.appendChild(자식객체)
+         document.body.appendChild(header)
+      </script>
+   </body>
+</html>

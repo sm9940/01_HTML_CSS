@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 30px;
+        }
+
+        /* 1. 다운받은 글꼴 로드 */
+        @font-face {
+            font-family: 'Ostrich'; /* 폰트 이름 지어주기*/
+            src: local('Ostrich Sans'), /* local: 내 컴퓨터에 해당 글꼴이 설치가 되어있으면 이걸 써라 */
+            /* 해당 폰트가 없으면 위에서 순서대로 폰드를 로드한다 */
+            url('./fonts/ostrich-sans-bold.woff') format('woff'),
+            url('./fonts/ostrich-sans-bold.ttf') format('truetype'),
+            url('./fonts/ostrich-sans-bold.svg') format('svg');
+        }
+        /* sans-serif: 다국어 지원 대문에 항상 font-family 맨 끝에 붙는다 */
+        .wfont {
+            font-family: 'Ostrich', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p>Using Default Fonts</p>
+    <p class="wfont">Using Web Fonts</p>
+</body>
+</html>

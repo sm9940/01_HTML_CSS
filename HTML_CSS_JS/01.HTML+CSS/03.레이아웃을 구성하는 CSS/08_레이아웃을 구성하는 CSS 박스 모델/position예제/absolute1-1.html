@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grand {
+            position: relative;
+            width: 800px;
+            height: 400px;
+            background-color: burlywood;
+           
+        }
+        .parent {
+            
+            width: 400px;
+            height: 200px;
+            background-color: royalblue;
+       
+        }
+        /* ★absolute는 relative를 가진 부모태그를 기준으로 위치를 이동한다 */
+        /* relative를 갖는 부모가 없으면 뷰포트를 기준으로 위치를 이동한다 */
+        .child1 {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-color: salmon;
+            top: 80px;
+            right: 150px;
+            z-index: 2;
+        }
+        .child2 {
+            position: absolute;
+            top: 80px;
+            right: 100px;
+            width: 200px;
+            height: 100px;
+            background-color: chartreuse;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="grand">
+    <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+    </div>
+</div>
+</body>
+</html>

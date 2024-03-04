@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <p>
+         <button class="btn1">버튼1</button>
+      </p>
+      <p>내용1</p>
+      <p>
+         <button class="btn2">버튼2</button>
+      </p>
+      <p>내용2</p>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+         $('.btn1').click(function () {
+            $('.btn1').parent().next().css('color', 'red')
+         })
+         $('.btn2').on({
+            'mouseover focus': function () {
+               $('.btn2').parent().next().css('color', 'red')
+            },
+         })
+         //이벤트 강제 발생시키기 첫번째 방법
+         //$('이벤트 대상').단독 이벤트 등록 메소드()
+         //$('.btn1').click()
+
+         //  //이벤트 강제 발생시키기 두번째 방법
+         //  //$('이벤트 대상').trigger('이벤트 종류')
+         //  $('.btn2').trigger('mouseover')
+
+         //이벤트 제거 첫번째 방법
+         //$('이벤트 대상').off('제거할 이벤트 종류')
+         $('.btn1').off('click')
+         //이벤트 제거 두번째 방법
+         $('.btn2').off('mouseover focus')
+      </script>
+   </body>
+</html>

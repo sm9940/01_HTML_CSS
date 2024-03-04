@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <select>
+         <option>떡볶이</option>
+         <option>순대</option>
+         <option>오뎅</option>
+         <option>튀김</option>
+      </select>
+      <p>선택: 떡볶이</p>
+      <script>
+         const select = document.querySelector('select')
+         const p = document.querySelector('p')
+
+         select.addEventListener('change', (event) => {
+            console.log(event) //내가 발생시킨 이벤트에 대한 정보가 들어있는 JSON 객체 데이터
+            const options = event.currentTarget.options //option 요소에 대한 정보가 들어있음
+
+            const index = options.selectedIndex //option 요소에 대한 index 번호를 가져온다(★인덱스는 0번 부터 시작)
+
+            p.textContent = `선택:${options[index].textContent}`
+         })
+      </script>
+   </body>
+</html>

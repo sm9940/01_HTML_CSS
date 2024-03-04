@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         html,
+         body {
+            height: 100%;
+         }
+
+         .chun {
+            height: 250px;
+            width: 250px;
+            margin: 10px;
+         }
+
+         #chun1 {
+            background: url('images/out.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+         }
+
+         #chun2 {
+            background: url('images/vacation.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+         }
+
+         #chun3 {
+            background: url('images/meeting.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+         }
+
+         .container {
+            display: flex;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="box">
+            <div class="chun" id="chun1"></div>
+            <p>춘식 선임은 6:00PM 퇴근합니다.</p>
+         </div>
+         <div class="box">
+            <div class="chun" id="chun2"></div>
+            <p>춘식 선임은 12/07일 연차입니다.</p>
+         </div>
+         <div class="box">
+            <div class="chun" id="chun3"></div>
+            <p>춘식 선임은 2:00PM 미팅입니다.</p>
+         </div>
+      </div>
+   </body>
+</html>

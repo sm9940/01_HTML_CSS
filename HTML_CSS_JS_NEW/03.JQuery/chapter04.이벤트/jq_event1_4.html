@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <p>
+         <img class="img1" src="https://placekitten.com/300/300" alt="" />
+      </p>
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+      <script
+         src="https://code.jquery.com/jquery-1.12.4.js"
+         integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+         crossorigin="anonymous"
+      ></script>
+      <script>
+         $(document).ready(function () {
+            //HTML 전체 요소가 로딩시 이벤트가 실행이 된다
+            var h1 = $('.img1').height()
+            console.log('ready', h1)
+         })
+         // 3버전에서 작동하지 않음
+         //외부 소스(이미지나 파일)가 로드 되면 실행이 된다
+         $(window).load(function () {
+            var h2 = $('.img1').height()
+            console.log('load', h2)
+         })
+
+         //  widow.onload = function () {
+         //     var h2 = $('.img1').height()
+         //     console.log('load', h2)
+         //  }
+      </script>
+   </body>
+</html>

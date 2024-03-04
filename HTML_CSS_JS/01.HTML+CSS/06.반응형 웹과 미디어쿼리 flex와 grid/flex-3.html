@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .container {
+        background-color: #a1a0a0;
+        border: 1px solid #222;
+        margin-bottom: 30px;
+        display: flex;
+    }
+    
+    .box {
+        padding: 5px 45px;
+        margin: 5px;
+        background-color: #222;
+    }
+    p {
+        color: #fff;
+        text-align: center;
+    }
+    /* flex-flow:direction, wrap을 동시에 지정 */
+    #opt1{
+        flex-flow: row wrap;
+    }
+    #opt2{
+        flex-flow: row nowrap;
+    }
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+</body>
+</html>

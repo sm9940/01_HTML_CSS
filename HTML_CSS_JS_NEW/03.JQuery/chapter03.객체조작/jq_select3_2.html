@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1><strong>객체 조작 및 생성</strong></h1>
+      <section id="sec_1">
+         <h2>이미지 속성</h2>
+         <p><img src="images/math_img_1.jpg" alt="바위" border="2" /></p>
+      </section>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+      <script>
+         //$(선택자).attr(속성명) => 속성의 값을 가지고 온다
+         var srcVal = $('#sec_1 img').attr('src')
+         console.log(srcVal)
+
+         //속성의 값을 지정한다
+         $('#sec_1 img')
+            .attr({
+               width: 200,
+               alt: '가위',
+               src: 'images/math_img_2.jpg',
+            })
+            .removeAttr('border')
+         //$(선택자).removeAttr(속성명) => 선택한 속성을 지운다
+         //  $('#sec_1 img').removeAttr('border')
+      </script>
+   </body>
+</html>
